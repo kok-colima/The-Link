@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Menu</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta charset="UTF-8">
+
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript">
+ function onclicker()
+        {       
+           window.location.replace('instructions.html'); 
+        }
+        function onBodyLoad()
+        {       
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        function onDeviceReady()
+        {
+            // do your thing!
+            navigator.notification.alert("PhoneGap is working")
+        }
+
+        </script>
+    <style type="text/css">
+    body {
+	background-image: url(Imgs/ImgsMenu/fondo.png);
+	background-repeat: repeat;
+}
+    .title {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+    body,td,th {
+	color: #FFF;
+}
+    </style>
+    </head>
+    <body onload="onBodyLoad()"><form action="instructions.html" method="post" onClick="onclicker()">
+   
+    <div align="center">
+      <h1 class="title"><em>The link</em></h1>
+    
+      <p><img src="Imgs/ImgsMenu/logo.gif" alt="logo" width="170" height="169" align="absmiddle">
+        
+      </p>
+      <h3>
+        <label>"TAP to start"</label>
+      &nbsp;</h3>
+    </div>
+    </form>
+    </body>
+</html>
+

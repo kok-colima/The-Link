@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Menu</title>
+<script type="text/javascript">
+	function tocamera()
+        {       
+           window.location.replace('camera.html'); 
+        }
+
+	function toAudio()
+        {       
+           window.location.replace('audio.html'); 
+        }
+		
+	function toChat()
+        {       
+           window.location.replace('chat.html'); 
+        }		
+</script>
+<style type="text/css">
+body {
+	background-image: url(Imgs/ImgsMenu/fondo.png);
+}
+body,td,th {
+	color: #FFF;
+}
+</style>
+</head>
+
+<body>
+<div align="center">
+<form style="background-image:url(Imgs/ImgsMenu/menugrabadora.png)"><h1 class="title"><em>The link</em></h1>
+</form>
+
+<form>
+	<p><img src="Imgs/ImgsMenu/connect.png" width="400" height="100" alt="conect" onclick="toChat()" /></p>
+	<p><img src="Imgs/ImgsMenu/takephoto.png" width="400" height="100" alt="photo" onclick="tocamera()" /></p>
+	<p><img src="Imgs/ImgsMenu/recordaudio.png" width="400" height="100" alt="audio" onclick="toAudio()" /></p>
+</form>
+</div>
+</body>
+</html>
