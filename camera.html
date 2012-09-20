@@ -1,42 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>camera</title>
-<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-<script src="cordova-1.9.0.js"></script>
-<script src="jquery.mobile-1.0.min.js"></script>
-
-<script type="text/javascript" charset="utf-8">
-function capturePhoto(){
-    navigator.camera.getPicture(uploadPhoto(),null,{sourceType:1,quality:60});
-}
-
-function uploadPhoto(data){
-cameraPic.src = "data:image/jpeg;base64," + data;
-	
-var img3 = new Image();
-img3.src = "data:image/jpeg;base64," + data;
-	
-var ctx = document.getElementById('myCanvas').getContext('2d');
-
-var img2 = new Image();
-img2.src = 'miku.png';
-
-var img = new Image();
-img.src = 'Imgs/ImgsMenu/fondo.png';
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
-	ctx.drawImage(img2,0,0);
-	ctx.drawImage(img3,0,0);
-  }
-  
-  }
-    </script>
-    
-
+    <title>Take a photo</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="jquery-mobile/the-link.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-mobile/the-link.min.css" rel="stylesheet" type="text/css"/>
+	<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>    
 </head>
 
+
+<script type="text/javascript" charset="utf-8">
+	function capturePhoto(){
+    	navigator.camera.getPicture(uploadPhoto(),null,{sourceType:1,quality:60});
+	}
+
+	function uploadPhoto(data){
+	cameraPic.src = "data:image/jpeg;base64," + data;
+	
+	var img3 = new Image();
+	img3.src = "data:image/jpeg;base64," + data;
+	
+	var ctx = document.getElementById('myCanvas').getContext('2d');
+
+	var img2 = new Image();
+	img2.src = 'miku.png';
+
+	var img = new Image();
+	img.src = 'Imgs/ImgsMenu/fondo.png';
+  	img.onload = function(){
+    	ctx.drawImage(img,0,0);
+		ctx.drawImage(img2,0,0);
+		ctx.drawImage(img3,0,0);
+  	}
+  
+  }
+</script>
+    
 <body >
 
 <button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
