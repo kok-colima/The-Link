@@ -1,20 +1,45 @@
-<!DOCTYPE html>
-<html>
-	<head>
-    	<title>Welcome to The Link</title>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
-		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script> 
- 	</head>
-    
-<body>
-<div data-role="page" id="page">
-	<div data-role="header">
-		<h1>Welcome to The Link</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Welcome to The Link</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</head>
+
+<script type="text/javascript">
+	var AP;
+	function onstart(){
+	AP = Math.floor((Math.random()*10)+1);
+	//$('#tap').text(AP);
+	}
+
+	function onclicker(){       
+		window.location.replace('intro.html?'+AP); 
+    }
+	
+    function onBodyLoad(){       
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    function onDeviceReady(){
+		// do your thing!
+        navigator.notification.alert("PhoneGap is working")
+    }
+</script>
+
+<body onClick="onclicker()" onLoad="onstart()">
+<div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+	<div data-role="header" align="center">
+    	<h1 class="title"><em>The link</em></h1>
     </div>
+    <div data-role="content" align="center">
+	    <p><img src="Imgs/ImgsMenu/logo.gif" alt="logo" width="170" height="169" align="absmiddle"></p>
+    	<h3><label name="tap" id="tap">"TAP to start"</label></h3>
+	</div>
 </div>
 </body>
 </html>

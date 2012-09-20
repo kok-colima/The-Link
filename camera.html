@@ -1,22 +1,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Take a photo</title>
+<title>Take a photo</title>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script> 
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 </head>
 
-
+<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
 <script type="text/javascript" charset="utf-8">
-	function capturePhoto(){
-    	navigator.camera.getPicture(uploadPhoto(),null,{sourceType:1,quality:60});
-	}
 
-	function uploadPhoto(data){
-	cameraPic.src = "data:image/jpeg;base64," + data;
+
+function capturePhoto(){
+	//navigator.camera.getPicture(uploadPhoto(),null,{sourceType:1,quality:60});
+	navigator.camera.getPicture(uploadPhoto(), onFail(),{ quality : 30, destinationType: destinationType.FILE_URI });
+}
+
+function uploadPhoto(data){
+    var cameraPic = document.getElementById('cameraImage');
+    cameraPic.style.visibility = 'visible';
+    cameraPic.src= "data:image/jpeg;base64," + data;
 	
 	var img3 = new Image();
 	img3.src = "data:image/jpeg;base64," + data;
@@ -28,21 +35,25 @@
 
 	var img = new Image();
 	img.src = 'Imgs/ImgsMenu/fondo.png';
-  	img.onload = function(){
-    	ctx.drawImage(img,0,0);
-		ctx.drawImage(img2,0,0);
-		ctx.drawImage(img3,0,0);
-  	}
+	
+	img.onload = function(){
+    ctx.drawImage(img,0,0);
+	ctx.drawImage(img2,0,0);
+	ctx.drawImage(img3,0,0);
+	}
   
   }
+  
+function onFail(message) {
+	alert('Failed because: ' + message);
+	}
 </script>
-    
+	
 <body >
+	<button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
+	<button class="camera-control2" onclick="captureImage();">Capture Photo2</button>
 
-<button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
-
-<img id="cameraPic" src="" style="width:auto;height:120px;"></img>
-<canvas id="myCanvas"></canvas>
-
+	<img id="cameraImage" src="" style="width:auto;height:120px;"></img>
+	<canvas id="myCanvas"></canvas>
 </body>
 </html>
