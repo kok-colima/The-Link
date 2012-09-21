@@ -43,7 +43,7 @@ KaraOkulta Games [Colima]
 <icon src="icon.png" />
 <gap:splash src="splash.png" />
 
-<!-- iOS Icons & Splash Screens
+<!-- iOS Icons & Splash Screens-->
 
 <icon src="icons/ios/icon.png" width="57" height="57" />
 <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
@@ -53,9 +53,8 @@ KaraOkulta Games [Colima]
 <gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
 <gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
 <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
--->
 
-<!-- Android Icons & Splash Screens
+<!-- Android Icons & Splash Screens-->
 <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
 <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
@@ -65,25 +64,21 @@ KaraOkulta Games [Colima]
 <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
--->
 
-<!-- BlacBerry Icons & Splash Screens
+<!-- BlacBerry Icons & Splash Screens-->
 <icon src="icons/bb/icon.png" gap:platform="blackberry" />
 <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
 
 <gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
--->
 
-<!-- Windows Phone Icons & Splash Screens
+<!-- Windows Phone Icons & Splash Screens-->
 <icon src="icons/winphone/icon.png" gap:platform="winphone" />
 <icon src="icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
 
 <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
--->
 
-<!-- WebOS Icons & Splash Screens
+<!-- WebOS Icons & Splash Screens-->
 <icon src="icons/webos/icon.png" gap:platform="webos" />
 <icon src="icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" />
--->
 
 </widget>
