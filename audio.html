@@ -21,12 +21,16 @@
     var mediaRec;
 	
 	function stopRecord() {
-		mediaRec.stopRecord();
+		if (mediaRec){
+			mediaRec.stopRecord();
+		}
     }
 	
 	function playRecord() {
-		mediaRec.play();
-    }
+		if (mediaRec){
+			mediaRec.play();
+		}
+	}
 	
     function recordAudio() {
 		var src = "myrecording.mp3";
