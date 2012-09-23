@@ -28,23 +28,27 @@
 
 </script>
 
-<body onClick="onclicker()" onLoad="onstart()">
-<div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+<body onClick="onclicker()" onLoad="onstart()" background="Imgs/ImgsMenu/fondo.png">
+<div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png)">
+
 	<div data-role="header" align="center">
-	    <img src="Imgs/ImgsCamara/btnvolver.png" alt="back" width="40" height="37"  onclick="onback();" align="right" />
+    	<a href="index.html" data-icon="delete">Close</a>
     	<h1 class="title"><em>The link</em></h1>
+        <a href="index.html" data-icon="refresh">Refresh</a>
     </div>
     
     <div data-role="content" align="center">
 	    <img src="icon.png" alt="logo" width="170" height="169" align="absmiddle">
-    	<h3><label name="tap" id="tap">"TAP to start"</label></h3>
 	</div>
     	
-    <div data-role="footer" align="center">
-	    <div id="footer">
-    	<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" align="right" />
-        <img src="Imgs/ImgsMenu/instructions.png" alt="Instructions" onclick="" />
-        </div>
+    <div data-role="footer" align="center" data-id="navMenu" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="d.html" data-role="button" data-icon="info">More</a></li>
+				<li><a href="d.html" data-role="button" data-icon="home">Menu</a></li>
+            	<li><a href="d.html" data-role="button" data-icon="grid">Instructions</a></li>
+			</ul>
+		</div>
     </div>
 </div>
 </body>
