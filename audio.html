@@ -25,19 +25,19 @@
 	}
 	
 	function stopRecord() {
-		if (mediaRec){
+		
 			mediaRec.stopRecord();
-		}
+		
     }
 	
 	function playRecord() {
-		if (mediaRec){
+		
 			mediaRec.play();
-		}
+		
 	}
 	
     function recordAudio() {
-		var src = "spirits/records/myrecording.wav";
+		var src = "spirit.wav";
         var mediaRec = new Media(src, onSuccess, onError);
         // Record audio
         mediaRec.startRecord();
