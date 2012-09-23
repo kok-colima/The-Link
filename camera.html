@@ -1,108 +1,148 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>camera</title>
-<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-    <script src="jquery.mobile/jquery-1.6.4.min"></script>
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Camera</title>
+
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="index.css" /> 
+
+    <script src="jquery.mobile/jquery-1.7.2.min"></script>
 	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
-<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
-<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
-<script type="text/javascript" charset="utf-8" src="camara.js"></script>
-<script type="text/javascript" charset="utf-8" type="text/javascript">
-
-function capturePhoto(){
-// navigator.camera.getPicture(uploadPhoto(),null,{sourceType:1,quality:60});
-
-function captureImage(){
-
-    navigator.device.capture.captureImage(uploadPhoto(), onFail(), {limit: 1});    
-}
- /*navigator.camera.getPicture(uploadPhoto(), onFail(),{ quality : 30, destinationType: destinationType.FILE_URI });*/
-}
-
-function uploadPhoto(data){
-	
-    var cameraPic = document.getElementById('capture-result');
-    cameraPic.style.visibility = 'visible';
-    cameraPic.src= "data:image/jpeg;base64," + data;
+	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+  
+	<!-- CDN Respositories: For production, replace lines above with these uncommented minified versions -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />-->
+	<!-- <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+	<!-- <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
 	
 	
-var img3 = new Image();
-img3.src = "data:image/jpeg;base64," + data;
+	</head>
+ <script type="text/javascript">
+ function foto(){
+	
+var img = new Image();
+img.src = document.getElementById('cameraImage').getContext('2d');
+
 	
 var ctx = document.getElementById('myCanvas').getContext('2d');
 
 var img2 = new Image();
 img2.src = 'miku.png';
 
-var img = new Image();
-img.src = 'Imgs/ImgsMenu/fondo.png';
+
   img.onload = function(){
     ctx.drawImage(img,0,0);
 	ctx.drawImage(img2,0,0);
-	ctx.drawImage(img3,0,0);
   }
   
   }
    function onFail(message) {
                 alert('Failed because: ' + message);
             }
-    </script>
-    
+			</script>
+  <body onload="init();">
+	<div data-role="page" id="page-home" class="type-interior" data-theme="b">
 
-<style type="text/css">
-/* BeginOAWidget_Instance_2644026: #OAWidget */
-	
-		.container {
-			width: 800px;
-			margin-right:auto;
-			margin-left:auto;
-			margin-top:25px;
-		}
-		.container a{
-		float:left;
-		}
-    
-		 .border {
-		 background-color: #FFF;
-		 border: 1px solid #cccccc;
-		 	padding: 3px;
-			margin: 5px;
-			-moz-border-radius:3px;
-			-webkit-border-radius:3px;
-			-khtml-border-radius:3px;
-			border-radius:3px;
-			-moz-box-shadow:0 0 5px rgba(0,0,0,0.45),0px 1px 2px rgba(0,0,0,0.2);
-			-webkit-box-shadow:0 0 5px rgba(0,0,0,0.45),0px 1px 2px rgba(0,0,0,0.2);
-			box-shadow:0 0 5px rgba(0,0,0,0.45),0px 1px 2px rgba(0,0,0,0.2);
-			
-			
-		}
+	<div data-role="header" data-theme="b">
+		<h1>Take photo</h1>
+ 	
+	</div>
+
+		    <div id="api-camera">
+               
+				<h4 class="help"><b>Take a Picture</b><br/>
+				<div class="ui-grid-a">
+					<div class="ui-block-a"><div data-role="button" onclick="take_pic();">Take a Picture</div></div>
+					<div class="ui-block-a"><div data-role="button" onclick="foto();">Aparecer fantasma buu</div></div>
+				</div>				
+      			<img id="cameraImage" src="" />
+				<canvas id="myCanvas"></canvas>
+			</div>
+
+		     <div class="api-div" id="api-device">
+				<h2>Device</h2>
+				<blockquote>
+					<p>The <code>device</code> object describes the device's hardware and software.</p>
+				</blockquote>
+				<h4><strong>Important</strong> Access <code>device</code> object only after <code>deviceready</code> event.</h4>
+      			<table id="deviceinfo">
+  					<tr>
+   					 	<th>Device</th>
+   					 	<th class="alt">Value</th>
+  					</tr>
+  					<tr>
+    					<td>Name</td>
+    					<td class="alt"><strong id="name">&nbsp;</strong></td>
+  					</tr>
+  					<tr>
+    					<td>Platform</td>
+   					 	<td class="alt"><strong id="platform">&nbsp;</strong></td>
+  					</tr>
+  					<tr>
+    					<td>PhoneGap Version</td>
+   					 	<td class="alt"><strong id="pgversion">&nbsp;</strong></td>
+  					</tr>
+  					<tr>
+    					<td>UUID</td>
+   					 	<td class="alt"><strong id="uuid">&nbsp;</strong></td>
+  					</tr>
+  					<tr>
+    					<td>OS Version</td>
+   					 	<td class="alt"><strong id="version">&nbsp;</strong></td>
+  					</tr>
+  					<tr>
+   					 	<th>Screen</th>
+   					 	<th class="alt">Value</th>
+  					</tr>
+  					<tr>
+    					<td>Width</td>
+    					<td class="alt"><strong id="width">&nbsp;</strong></td>
+  					</tr>
+   					<tr>
+    					<td>Height</td>
+    					<td class="alt"><strong id="height">&nbsp;</strong></td>
+  					</tr>
+   					<tr>
+    					<td>Available Width</td>
+    					<td class="alt"><strong id="availwidth">&nbsp;</strong></td>
+  					</tr>
+   					<tr>
+    					<td>Available Height</td>
+    					<td class="alt"><strong id="availheight">&nbsp;</strong></td>
+  					</tr>
+   					<tr>
+    					<td>Color Depth</td>
+    					<td class="alt"><strong id="colorDepth">&nbsp;</strong></td>
+  					</tr> 					
+				</table>							
+			</div>
+
+
+		  
+
+		    
+
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" class="footer-docs" data-theme="b">
 		
-/* EndOAWidget_Instance_2644026 */
-</style>
-<link href="../../jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body >
-<div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
-  <div data-role="header">
-    <h1>Header</h1>
-  </div>
-  <div data-role="content">
-  <button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
-<button class="camera-control2" onclick="takephoto();">Capture Photo2</button>
-<br/>
-<img width="330" height="174" id="capture-result"><br/>
-<span id="format-data"></span><br/>
-<canvas id="myCanvas"></canvas>
-  
-  </div>
-
-</div>
-
-
-</body>
+	</div>	
+	</div>	
+	<script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/contacts.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/events.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/file.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/storage.js"></script> 			
+  </body>
 </html>
