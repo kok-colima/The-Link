@@ -10,18 +10,8 @@
 	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script> 
 </head>
 
-<script type="text/javascript">
-	function onnext(){       
-		window.location.replace('menu.html'); 
-    }
-		
-	function onback(){       
-		window.location.replace('intro.html');
-	}
-</script>
-
 <body>
-<div data-role="page" id="one" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+<div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 	
     <div data-role="header" align="center">
     	<a href="index.html" data-icon="delete">Close</a>
@@ -57,9 +47,23 @@
 		<p align="justify">
 	7) If at some point you wish to end the conversation, say goodbye three times and wait until the application closes the communication with the after world. Do not log out until the application indicates that you're allowed to disconnect.
 		</p>
+        
+        <p align="center">
+        <a href="intro.html" data-direction="reverse" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Back</a>
+        <a href="index.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true">Menu</a>
+        </p>
+	</div>
+        
+    <div data-role="footer" data-id="navMenu" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="index.html" data-role="button" data-icon="info">More</a></li>
+				<li><a href="index.html" data-role="button" data-icon="home">Menu</a></li>
+            	<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
+			</ul>
+		</div>
+    </div>
     
 </div>
-
-
 </body>
 </html>

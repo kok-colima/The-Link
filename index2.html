@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   	<title>Main Menu</title>
+    <title>Welcome to The Link</title>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
@@ -11,26 +11,12 @@
 </head>
 
 <script type="text/javascript">
-	var AP;
-    function onstart() {
-		AP = Math.floor((Math.random()*10)+1);	
-	}
-	   
-	function toConnect() {     
-		$.mobile.changePage("connect.html?"+AP);  
-    }
-		
-	function toCamera() {       
-		$.mobile.changePage('camera.html?'+AP); 
-	}
-		
-	function toAudio() {       
-		$.mobile.changePage('audio.html?'+AP); 
-	}
-		
-	function onback() {       
+	
+	function onback()
+	{       
 		window.close();
 	}
+
 </script>
 
 <style type="text/css">
@@ -46,26 +32,24 @@
 	}
 </style>
 
-<body onload="onstart()">
+<body>
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 
-	<div data-role="header">
+	<div data-role="header" align="center">
     	<a href="index.html" data-icon="delete">Close</a>
-    	<h1 class="title"><em>Menu</em></h1>
+    	<h1 class="title"><em>The link</em></h1>
         <a href="index.html" data-icon="refresh">Refresh</a>
     </div>
     
-	<div data-role="content" align="center">
-		<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /><br /><br />
-  		<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /><br /><br />
-		<img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" onclick="toAudio();" /><br /><br />
+    <div data-role="content" align="center">
+	    <img src="icon.png" alt="logo" width="170" height="169" align="absmiddle">
 	</div>
-    
+    	
     <div data-role="footer" data-id="navMenu" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="menu.html" data-role="button" data-icon="info">More</a></li>
-				<li><a href="menu.html" data-role="button" data-icon="home">Menu</a></li>
+				<li><a href="index.html" data-role="button" data-icon="info">More</a></li>
+				<li><a href="index.html" data-role="button" data-icon="home">Menu</a></li>
             	<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
 			</ul>
 		</div>
@@ -74,3 +58,4 @@
 </div>
 </body>
 </html>
+
