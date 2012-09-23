@@ -27,15 +27,28 @@
 	}	
 </script>
 
+<style type="text/css">
+    body {
+		background-image: url(Imgs/ImgsMenu/fondo.png);
+		background-repeat: repeat;
+	}
+    .title {
+		font-family: Tahoma, Geneva, sans-serif;
+	}
+    body,td,th {
+		color: #FFF;
+	}
+</style>
+
 <body> 
 
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 	
-    <div data-role="header" align="center">
-    	<img src="Imgs/ImgsCamara/btnvolver.png" alt="back" width="40" height="37"  onclick="onback();" align="right" />
-		<h3>Audio Recorder</h3>
-	</div>
-    <br /><br />
+	<div data-role="header">
+    	<a href="index.html" data-icon="delete">Close</a>
+    	<h1 class="title"><em>Audio recorder</em></h1>
+        <a href="index.html" data-icon="refresh">Refresh</a>
+    </div>
     
     <div data-role="content" align="center">
 		<ul data-role="slider">Audio:</ul>
@@ -53,10 +66,14 @@
 	    <p id="audio_position"></p>
     </div>
     
-    <div data-role="footer" align="center">
-        <img src="Imgs/ImgsMenu/ap2.png" alt="Paranormal activity" onclick="" align="left"/>
-    	<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" align="right" />
-        <img src="Imgs/ImgsMenu/instructions.png" alt="Instructions" onclick="" />
+    <div data-role="footer" data-id="navMenu" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="menu.html" data-role="button" data-icon="info">More</a></li>
+				<li><a href="menu.html" data-role="button" data-icon="home">Menu</a></li>
+            	<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
+			</ul>
+		</div>
     </div>
     
 </div>

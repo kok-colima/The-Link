@@ -11,15 +11,6 @@
 </head>
 
 <script type="text/javascript">
-	var AP;
-	function onstart(){
-	AP = Math.floor((Math.random()*10)+1);
-	//$('#tap').text(AP);
-	}
-
-	function onclicker(){       
-		window.location.replace('intro.html?'+AP); 
-    }
 	
 	function onback()
 	{       
@@ -28,7 +19,20 @@
 
 </script>
 
-<body onClick="onclicker()" onLoad="onstart()" background="Imgs/ImgsMenu/fondo.png">
+<style type="text/css">
+    body {
+		background-image: url(Imgs/ImgsMenu/fondo.png);
+		background-repeat: repeat;
+	}
+    .title {
+		font-family: Tahoma, Geneva, sans-serif;
+	}
+    body,td,th {
+		color: #FFF;
+	}
+</style>
+
+<body>
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 
 	<div data-role="header" align="center">
@@ -41,6 +45,16 @@
 	    <img src="icon.png" alt="logo" width="170" height="169" align="absmiddle">
 	</div>
     	
+    <div data-role="footer" data-id="navMenu" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="menu.html" data-role="button" data-icon="info">More</a></li>
+				<li><a href="menu.html" data-role="button" data-icon="home">Menu</a></li>
+            	<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
+			</ul>
+		</div>
+    </div>
+    
 </div>
 </body>
 </html>
