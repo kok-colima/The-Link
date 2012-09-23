@@ -5,63 +5,57 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<link rel="stylesheet" href="jquery-mobile/the-link.structure-1.0.min.css" />
+	<script src="jquery-mobile/jquery-1.6.4.min.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script> 
 </head>
 
 <script type="text/javascript">  
-	
 	function onback(){       
 		window.location.replace('menu.html'); 
     }
 	
 	function connect(){
-    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
-	$('#load').attr('src','Imgs/ImgsConnect/load.gif');
-	$('#load').removeAttr('hidden');
-	$('#msg').removeAttr('hidden');
-	window.setTimeout('loading()',4000);
-	
+	    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
+		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
+		$('#load').removeAttr('hidden');
+		$('#msg').removeAttr('hidden');
+		window.setTimeout('loading()',4000);
 	}
 	
-	function loading(){
-	
-	if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
-	{
-	window.location.replace('chat.html?'+$('#name').val()); 
-	}
-	else
-	{
-
-	$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
-	$('#msg').text("Connection Failed. Try again later or seek for someone else");
-	$('#msg').attr('style','color:#FA5882');
-	$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
-	}
+	function loading(){	
+		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
+			window.location.replace('chat.html?'+$('#name').val()); 
+			
+		else {
+			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
+			$('#msg').text("Connection Failed. Try again later or seek for someone else");
+			$('#msg').attr('style','color:#FA5882');
+			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
+		}
 	
 	}
 </script>
 
 <body>
-	<div data-role="page" id="conect" align="center" style="background-image: url(Imgs/ImgsMenu/fondo.png);">
-  		<div data-role="header"><img src="Imgs/ImgsCamara/btnvolver.png" alt="back" width="40" height="37"  onclick="onback();" align="right" /><h1 class="title"> Connect with spirits  </h1>
-
-
-</div>
-  	<div data-role="content">
-    <div data-role="fieldcontain">
-    <p>
-        <input name="textinput" type="text" class="ui-input-text" id="name" placeholder="Type the spirit's name"/>
-    </p>
-      
-<p><img id="btcnt" name="btcnt"src="Imgs/ImgsConnect/connectOFF.png" onclick="connect();" ></p>
-<p><img src="" width="100" height="100" alt="loading" id="load" name="load" hidden="true" /></p>
-<p><label id="msg"  style=" color:#FFF" hidden="true">Connecting...</label></p>
-
+<div data-role="page" id="conect" align="center" style="background-image: url(Imgs/ImgsMenu/fondo.png);">
+	<div data-role="header">
+    	<img src="Imgs/ImgsCamara/btnvolver.png" alt="back" width="40" height="37"  onclick="onback();" align="right" />
+	    <h1>Connect with spirits</h1>
 	</div>
-</div>
-  
+    
+  	<div data-role="content">
+		<input name="textinput" type="text" class="ui-input-text" id="name" placeholder="Type the spirit's name"/><br /><br />
+		<img id="btcnt" name="btcnt"src="Imgs/ImgsConnect/connectOFF.png" onclick="connect();" ><br /><br />
+		<img src="" width="100" height="100" alt="loading" id="load" name="load" hidden="true" /><br /><br />
+		<label id="msg"  style=" color:#FFF" hidden="true">Connecting...</label>
+	</div>
+    
+    <div data-role="footer" align="center">
+        <img src="Imgs/ImgsMenu/ap2.png" alt="Paranormal activity" onclick="" align="left"/>
+    	<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" align="right" />
+        <img src="Imgs/ImgsMenu/instructions.png" alt="Instructions" onclick="" />
+    </div>
 </div>
 </body>
 </html>

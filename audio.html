@@ -20,6 +20,10 @@
 	var src;
     var mediaRec;
 	
+	function onback(){       
+		window.location.replace('menu.html'); 
+	}
+	
 	function stopRecord() {
 		if (mediaRec){
 			mediaRec.stopRecord();
@@ -76,15 +80,6 @@
         document.getElementById('audio_position').innerHTML = position;
     }
 </script>
- 
-<style type="text/css">
-body,td,th {
-	color: #FFF;
-}
-body {
-	background-image: url(Imgs/ImgsMenu/fondo.png);
-}
-</style> 
 
 <body> 
 
@@ -113,9 +108,10 @@ body {
 	    <p id="audio_position"></p>
     </div>
     
-    <div data-role="footer" aria-atomic="true" align="center">
-    	<img src="Imgs/ImgsGrabadora/btnvolver.png" alt="Back" />
-        <img src="Imgs/ImgsGrabadora/btnrecON.png" alt="More" />
+    <div data-role="footer" align="center">
+        <img src="Imgs/ImgsMenu/ap2.png" alt="Paranormal activity" onclick="" align="left"/>
+    	<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" align="right" />
+        <img src="Imgs/ImgsMenu/instructions.png" alt="Instructions" onclick="" />
     </div>
     
 </div>
