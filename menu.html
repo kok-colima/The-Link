@@ -16,16 +16,16 @@
 		AP = Math.floor((Math.random()*10)+1);	
 	}
 	   
-	function toConnect() {       
-        window.location.replace('connect.html?'+AP); 
+	function toConnect() {     
+		$.mobile.changePage("connect.html?"+AP);  
     }
 		
 	function toCamera() {       
-		window.location.replace('camera.html?'+AP); 
+		$.mobile.changePage('camera.html?'+AP); 
 	}
 		
 	function toAudio() {       
-		window.location.replace('audio.html?'+AP); 
+		$.mobile.changePage('audio.html?'+AP); 
 	}
 		
 	function onback() {       
@@ -56,9 +56,9 @@
     </div>
     
 	<div data-role="content" align="center">
-		<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();"><br /><br />
-  		<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();"/><br /><br />
-		<img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" onclick="toAudio();"/><br /><br />
+		<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /><br /><br />
+  		<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /><br /><br />
+		<img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" onclick="toAudio();" /><br /><br />
 	</div>
     
     <div data-role="footer" data-id="navMenu" data-position="fixed">
