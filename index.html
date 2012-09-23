@@ -20,16 +20,13 @@
 	function onclicker(){       
 		window.location.replace('intro.html?'+AP); 
     }
-</script>
+	
+	function onback()
+	{       
+	  window.close();
+	}
 
-<style type="text/css">
-body,td,th {
-	color: #FFF;
-}
-body {
-	background-image: url(Imgs/ImgsMenu/fondo.png);
-}
-</style>
+</script>
 
 <body onClick="onclicker()" onLoad="onstart()">
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
@@ -39,9 +36,14 @@ body {
     </div>
     
     <div data-role="content" align="center">
-	    <p><img src="icon.png" alt="logo" width="170" height="169" align="absmiddle"></p>
+	    <img src="icon.png" alt="logo" width="170" height="169" align="absmiddle">
     	<h3><label name="tap" id="tap">"TAP to start"</label></h3>
 	</div>
+    	
+    <div data-role="footer" align="center">
+    	<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" align="right" />
+        <img src="Imgs/ImgsMenu/instructions.png" alt="Instructions" onclick="" />
+    </div>
 </div>
 </body>
 </html>
