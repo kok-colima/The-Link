@@ -5,11 +5,11 @@
     <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
     <title>Camera</title>
 
- 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+ 	<link href="jquery-mobile/the-link.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="index.css" /> 
 
-    <script src="jquery.mobile/jquery-1.7.2.min"></script>
-	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+    <script src="jquery-mobile/jquery-1.6.4.min.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
 	<script type="text/javascript" charset="utf-8" src="index.js"></script>
   
@@ -24,7 +24,7 @@
  function foto(){
 	
 var img = new Image();
-img.src = document.getElementById('cameraImage').getContext('2d');
+img.src = take_pic();
 
 	
 var ctx = document.getElementById('myCanvas').getContext('2d');
@@ -53,7 +53,7 @@ img2.src = 'miku.png';
 
 		    <div id="api-camera">
                
-				<h4 class="help"><b>Take a Picture</b><br/>
+				<h4 class="help"><b>Take a Picture</b></h4><br/>
 				<div class="ui-grid-a">
 					<div class="ui-block-a"><div data-role="button" onclick="take_pic();">Take a Picture</div></div>
 					<div class="ui-block-a"><div data-role="button" onclick="foto();">Aparecer fantasma buu</div></div>
@@ -63,11 +63,9 @@ img2.src = 'miku.png';
 			</div>
 
 		     <div class="api-div" id="api-device">
-				<h2>Device</h2>
-				<blockquote>
-					<p>The <code>device</code> object describes the device's hardware and software.</p>
+			
 				</blockquote>
-				<h4><strong>Important</strong> Access <code>device</code> object only after <code>deviceready</code> event.</h4>
+				
       			<table id="deviceinfo">
   					<tr>
    					 	<th>Device</th>
@@ -119,11 +117,6 @@ img2.src = 'miku.png';
   					</tr> 					
 				</table>							
 			</div>
-
-
-		  
-
-		    
 
 		</div>
 	</div>
