@@ -11,9 +11,14 @@
 </head> 
 
 <script type="text/javascript">
- function onnext(){       
-	window.location.replace('instructions.html'); 
- }
+	function onnext(){       
+		window.location.replace('instructions.html'); 
+	}
+	
+	function onback()
+	{       
+		window.location.replace('index.html');
+	}
 </script>
 
 <style type="text/css">
@@ -28,6 +33,7 @@ body {
 <body>
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 	<div data-role="header">
+	    <img src="Imgs/ImgsCamara/btnvolver.png" alt="back" width="40" height="37"  onclick="onback();" align="right" />
     	<h1 align="center" class="title">The link</h1>
   	</div>
   	
@@ -46,8 +52,8 @@ body {
   	</div>
 
 	<div data-role="footer" align="center">
-		<img src="Imgs/ImgsGrabadora/btnvolver.png" alt="Back" />
-	    <img src="Imgs/ImgsGrabadora/btnrecON.png" alt="More" />
+		<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" />
+        <img src="Imgs/ImgsMenu/ap2.png" alt="Paranormal acrivity" onclick="" />
 	</div>
 </div>
 </body>

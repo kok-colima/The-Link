@@ -26,10 +26,14 @@
            window.location.replace('camera.html?'+AP); 
         }
 		
-		function tocamerame()
+		function toAudio()
         {       
            window.location.replace('audio.html?'+AP); 
         }
+		
+		function onback(){       
+			window.close();
+		}
 		</script>
 <style type="text/css">
 body {
@@ -46,16 +50,21 @@ body,td,th {
 
 <body onload="onstart()">
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
-  <div data-role="header">
-    <h1 align="center" class="title">The link</h1>
-  </div>
-  <div data-role="content" align="center">
-  <p><img src="Imgs/ImgsMenu/connect.png" alt="conect" width="343" onclick="toconnect()" >
+  	<div data-role="header">
+		<img src="Imgs/ImgsCamara/btnvolver.png" alt="back" width="40" height="37"  onclick="onback();" align="right" />
+	    <h1 align="center" class="title">The link</h1>
+	</div>
     
-  </p>
-  <p><img src="Imgs/ImgsMenu/takephoto.png" alt="photo" width="349" onclick="tocamera()" /></p>
-  <p><img src="Imgs/ImgsMenu/recordaudio.png" alt="audio" width="350"  onclick="tocamerame()"/></p>
-</div>
+	<div data-role="content" align="center">
+		<img src="Imgs/ImgsMenu/connect.png" alt="conect" width="343" onclick="toconnect()" ><br /><br />
+  		<img src="Imgs/ImgsMenu/takephoto.png" alt="photo" width="349" onclick="tocamera()" /><br /><br />
+		<img src="Imgs/ImgsMenu/recordaudio.png" alt="audio" width="350"  onclick="toAudio()"/><br /><br />
+	</div>
+    
+    <div data-role="footer" align="center">
+    	<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" />
+        <img src="Imgs/ImgsMenu/ap2.png" alt="Paranormal acrivity" onclick="" />
+    </div>
 </div>
 </body>
 </html>
