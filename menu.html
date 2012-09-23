@@ -9,47 +9,33 @@
 	<script src="jquery-mobile/jquery-1.6.4.min.js"></script>
 	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script> 
 </head>
+
 <script type="text/javascript">
- var AP;
-    function onstart(){
-	AP = Math.floor((Math.random()*10)+1);
-	
+	var AP;
+    function onstart() {
+		AP = Math.floor((Math.random()*10)+1);	
 	}
 	   
-	    function toconnect()
-        {       
-           window.location.replace('connect.html?'+AP); 
-        }
+	function toconnect() {       
+        window.location.replace('connect.html?'+AP); 
+    }
 		
-		function tocamera()
-        {       
-           window.location.replace('camera.html?'+AP); 
-        }
+	function tocamera() {       
+		window.location.replace('camera.html?'+AP); 
+	}
 		
-		function toAudio()
-        {       
-           window.location.replace('audio.html?'+AP); 
-        }
+	function toAudio() {       
+		window.location.replace('audio.html?'+AP); 
+	}
 		
-		function onback(){       
-			window.close();
-		}
-		</script>
-<style type="text/css">
-body {
-	background-image: url(Imgs/ImgsMenu/fondo.png);
-}
-body,td,th {
-	color: #FFF;
-}
-</style>
-<link href="../../jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css" />
-<link href="../../jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css" />
-<script src="../../jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script src="../../jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+	function onback() {       
+		window.close();
+	}
+</script>
 
 <body onload="onstart()">
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+
   	<div data-role="header">
 		<img src="Imgs/ImgsCamara/btnvolver.png" alt="back" width="40" height="37"  onclick="onback();" align="right" />
 	    <h1 align="center" class="title">The link</h1>
@@ -65,6 +51,7 @@ body,td,th {
     	<img src="Imgs/ImgsMenu/btnmas2.png" alt="More" onclick="" />
         <img src="Imgs/ImgsMenu/ap2.png" alt="Paranormal acrivity" onclick="" />
     </div>
+    
 </div>
 </body>
 </html>
