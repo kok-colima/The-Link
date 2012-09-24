@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    	<title>Main Menu</title>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
 	<link rel="stylesheet" href="jquery-mobile/the-link.structure-1.0.min.css" />
 	<script src="jquery-mobile/jquery-1.6.4.min.js"></script>
@@ -31,6 +31,28 @@
 	function onback() {       
 		window.close();
 	}
+	
+//Connect with spirits
+	function connect(){
+	    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
+		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
+		$('#load').removeAttr('hidden');
+		$('#msg').removeAttr('hidden');
+		window.setTimeout('loading()',4000);
+	}
+	
+	function loading(){	
+		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
+			window.location.replace('chat.html?'+$('#name').val()); 
+			
+		else {
+			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
+			$('#msg').text("Connection Failed. Try again later or seek for someone else");
+			$('#msg').attr('style','color:#FA5882');
+			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
+		}
+	
+	}
 </script>
 
 <style type="text/css">
@@ -56,8 +78,8 @@
     </div>
     
 	<div data-role="content" align="center">
-		<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /><br /><br />
-  		<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /><br /><br />
+    	<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /><br /><br />
+    	<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /><br /><br />
 		<img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" onclick="toAudio();" /><br /><br />
 	</div>
     

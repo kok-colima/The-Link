@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Connect with spirits</title>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
-	<link rel="stylesheet" href="jquery-mobile/the-link.structure-1.0.min.css" />
-	<script src="jquery-mobile/jquery-1.6.4.min.js"></script>
-	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script> 
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="/jquery-mobile/the-link.min.css" />
+	<link rel="stylesheet" href="/jquery-mobile/the-link.structure-1.0.min.css" />
+	<script src="/jquery-mobile/jquery-1.6.4.min.js"></script>
+	<script src="/jquery-mobile/jquery.mobile-1.0.min.js"></script> 
 </head>
 
 <script type="text/javascript">  
 	function onback(){       
-		//window.location.replace('menu.html'); 
+		window.location.replace('menu.html'); 
     }
 	
 	function connect(){
@@ -20,25 +20,12 @@
 		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
 		$('#load').removeAttr('hidden');
 		$('#msg').removeAttr('hidden');
-		$.delay(1000, function(){
-			$('#msg').text("asda");
-     /*   
-		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
-			$.mobile.changePage('chat.html?'+$('#name').val()); 
-			
-		else {
-			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
-			$('#msg').text("Connection Failed. Try again later or seek for someone else");
-			$('#msg').attr('style','color:#FA5882');
-			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
-		}*/
-});
-		//window.setTimeout('loading()',4000);
+		window.setTimeout('loading()',4000);
 	}
 	
-	/*function loading(){	
+	function loading(){	
 		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
-			$.mobile.changePage('chat.html?'+$('#name').val()); 
+			window.location.replace('chat.html?'+$('#name').val()); 
 			
 		else {
 			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
@@ -47,10 +34,6 @@
 			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
 		}
 	
-	}
-	*/
-	function toCamera() {       
-		$.mobile.changePage('index.html'); 
 	}
 </script>
 
@@ -78,7 +61,7 @@
     
   	<div data-role="content">
 		<input name="textinput" type="text" class="ui-input-text" id="name" placeholder="Type the spirit's name"/><br /><br />
-		<img id="btcnt" name="btcnt"src="Imgs/ImgsConnect/connectOFF.png" onclick="connect();" /><br /><br />
+		<img id="btcnt" name="btcnt"src="Imgs/ImgsConnect/connectOFF.png" onclick="connect();" ><br /><br />
 		<img src="" width="100" height="100" alt="loading" id="load" name="load" hidden="true" /><br /><br />
 		<label id="msg"  style=" color:#FFF" hidden="true">Connecting...</label>
 	</div>
