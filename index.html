@@ -17,14 +17,17 @@
 	}
 	   
 	function toConnect() {     
+		$.mobile.loadPage("connect.html?");
 		$.mobile.changePage('connect.html?'+AP);  
     }
 		
 	function toCamera() {       
+		$.mobile.loadPage("camera.html?");
 		$.mobile.changePage('camera.html?'+AP); 
 	}
 		
-	function toAudio() {       
+	function toAudio() {      
+		$.mobile.loadPage("audio.html?"); 
 		$.mobile.changePage('audio.html?'+AP); 
 	}
 		
@@ -53,6 +56,27 @@
 		}
 	
 	}
+	
+//Audio recorder
+	function recordAudio() {
+        mediaRec = new Media(src, onSuccess, onError);
+		$('#RecordOFF').attr('hidden','true');
+		$('#RecordON').attr('hidden','false');
+		
+        // Record audio
+        mediaRec.startRecord();
+
+        // Stop recording after 10 sec
+        var recTime = 0;
+        var recInterval = setInterval(function() {
+            recTime = recTime + 1;
+            setAudioPosition(recTime + " sec");
+            if (recTime >= 10) {
+                clearInterval(recInterval);
+                mediaRec.stopRecord();
+            }
+        }, 1000);
+    }
 </script>
 
 <style type="text/css">
