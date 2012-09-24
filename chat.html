@@ -231,6 +231,7 @@ idr1=obj.conversacion.hola.guion[i].siguiente1;
 idr2=obj.conversacion.hola.guion[i].siguiente2;
 		break;
 	   }
+<<<<<<< HEAD
 	}
 //dibujamos la respuesta del fantasma
 var chat4 = new Image();
@@ -262,6 +263,39 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 		break;
 	   }
 	}
+=======
+	}
+//dibujamos la respuesta del fantasma
+var chat4 = new Image();
+chat4.src = 'Imgs/ImgsConnect/dialog2.png';
+chat4.onload = function(){
+			msg3.drawImage(chat4,0,0);
+			msg3.font="bold italic 20px Arial";
+			msg3.fillStyle = "#fff";
+			msg3.fillText(fantasma,110,50);
+}	
+
+//obtenemos primer respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr1)
+	   {
+respuesta1[0]=obj.conversacion.hola.guion[i].texto;
+respuesta1[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+//obtenemos la segunda respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr2)
+	   {
+respuesta2[0]=obj.conversacion.hola.guion[i].texto;
+respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+>>>>>>> origin/temp
 //respuestas
 		var img1 = new Image();
 		img1.src = 'Imgs/ImgsConnect/btnchat.png';
