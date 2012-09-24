@@ -27,7 +27,7 @@ var hola;
 		var name = new Array();
 		name=window.location.search.substr(1).split("?");
 		$('#spirit').text(name[0]);
-		
+
 //Seleccionamos el camino de Hola		
 switch(n)
 {
@@ -80,7 +80,7 @@ msg2 = document.getElementById('msg2').getContext('2d');
 msg3 = document.getElementById('msg3').getContext('2d');
 btn1 = document.getElementById('btn1').getContext('2d');
 btn2 = document.getElementById('btn2').getContext('2d');
-	
+
 
 //pregunta
 var chat1 = new Image();
@@ -94,7 +94,7 @@ chat1.onload = function(){
 //respuestas
 		var img1 = new Image();
 		img1.src = 'Imgs/ImgsConnect/btnchat.png';
-		
+
 		img1.onload = function(){
 			btn1.drawImage(img1,0,0);
 			btn1.font="bold italic 20px Arial";
@@ -108,7 +108,7 @@ chat1.onload = function(){
 		}
 
 	}
-	
+
 function clickres()
     {
 //obtenemos los canvas		
@@ -117,9 +117,9 @@ msg2 = document.getElementById('msg2').getContext('2d');
 msg3 = document.getElementById('msg3').getContext('2d');
 btn1 = document.getElementById('btn1').getContext('2d');
 btn2 = document.getElementById('btn2').getContext('2d');	
-	
+
 //limpiamos los canvas	
-	
+
 msg2.clearRect(0,0,600,600);
 msg3.clearRect(0,0,600,600);
 btn1.clearRect(0,0,600,600);
@@ -181,7 +181,7 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 //respuestas
 		var img1 = new Image();
 		img1.src = 'Imgs/ImgsConnect/btnchat.png';
-		
+
 		img1.onload = function(){
 			btn1.drawImage(img1,0,0);
 			btn1.font="bold italic 20px Arial";
@@ -194,7 +194,7 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 			btn2.fillText(respuesta2[0],110,50);
 		}
 	}
-	
+
 function clickres2()
     {
 //obtenemos los canvas		
@@ -231,7 +231,6 @@ idr1=obj.conversacion.hola.guion[i].siguiente1;
 idr2=obj.conversacion.hola.guion[i].siguiente2;
 		break;
 	   }
-<<<<<<< HEAD
 	}
 //dibujamos la respuesta del fantasma
 var chat4 = new Image();
@@ -263,43 +262,10 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 		break;
 	   }
 	}
-=======
-	}
-//dibujamos la respuesta del fantasma
-var chat4 = new Image();
-chat4.src = 'Imgs/ImgsConnect/dialog2.png';
-chat4.onload = function(){
-			msg3.drawImage(chat4,0,0);
-			msg3.font="bold italic 20px Arial";
-			msg3.fillStyle = "#fff";
-			msg3.fillText(fantasma,110,50);
-}	
-
-//obtenemos primer respuesta
-for(var i=0;i<100;i++)
-{
-	if(obj.conversacion.hola.guion[i].id==idr1)
-	   {
-respuesta1[0]=obj.conversacion.hola.guion[i].texto;
-respuesta1[1]=obj.conversacion.hola.guion[i].siguiente1;
-		break;
-	   }
-	}
-//obtenemos la segunda respuesta
-for(var i=0;i<100;i++)
-{
-	if(obj.conversacion.hola.guion[i].id==idr2)
-	   {
-respuesta2[0]=obj.conversacion.hola.guion[i].texto;
-respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
-		break;
-	   }
-	}
->>>>>>> origin/temp
 //respuestas
 		var img1 = new Image();
 		img1.src = 'Imgs/ImgsConnect/btnchat.png';
-		
+
 		img1.onload = function(){
 			btn1.drawImage(img1,0,0);
 			btn1.font="bold italic 20px Arial";
@@ -312,7 +278,7 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 			btn2.fillText(respuesta2[0],110,50);
 		}
 	}	
-		
+
 	function onback(){       
 		window.location.replace('menu.html'); 
 	}
@@ -332,12 +298,7 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 </style>
 
 <body onload="onload()">
-<<<<<<< HEAD
-
-<div data-role="page" id="conect" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
-=======
 <div data-role="page" id="conect" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF" align="center">
->>>>>>> origin/temp
 
     <div data-role="header">
     	<a href="index.html" data-icon="delete">Close</a>
@@ -346,7 +307,7 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
     </div>
 
 	<div data-role="content" >
-		
+
   <p><canvas id="msg" width="500"></canvas><br/>     <canvas id="msg2" width="500"></canvas><br/>
      <canvas id="msg3" width="500"></canvas>
         </p>
