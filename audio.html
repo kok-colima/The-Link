@@ -11,16 +11,71 @@
 </head>
 
 <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8" >
    // Wait for Cordova to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
 
     // Record audio
 	var state = 0; // 0 record, 1 stop, 2 playback   
-	var src = "recording.wav"; // name of auio file
+	var src = "recording.mp3"; // name of auio file
 	var mediaRec; // the object for recording and play sound
 	var directory; // holds a reference for directory reading
+	
+	function recordAudio() {
+        mediaRec = new Media(src, onSuccess, onError);
+		$('#RecordOFF').attr('hidden','true');
+		$('#RecordON').attr('hidden','false');
+		
+        // Record audio
+        mediaRec.startRecord();
+
+        // Stop recording after 10 sec
+        var recTime = 0;
+        var recInterval = setInterval(function() {
+            recTime = recTime + 1;
+            setAudioPosition(recTime + " sec");
+            if (recTime >= 10) {
+                clearInterval(recInterval);
+                mediaRec.stopRecord();
+            }
+        }, 1000);
+    }
+	
+	function stopRecord (){
+		mediaRec.stopRecord();
+		$('#RecordOFF').attr('hidden','false');
+		$('#RecordON').attr('hidden','true');
+	}
+	
+	function playRecord (){
+		if (mediaRec) 
+			mediaRec.play();
+		$('#PlayOFF').attr('hidden','true');
+		$('#PlayON').attr('hidden','false');
+	}
+	
+	function stopPlay (){
+		if (mediaRec) 
+			mediaRec.stop();
+		$('#PlayOFF').attr('hidden','false');
+		$('#PlayON').attr('hidden','true');
+	}
+	
+	function onSuccess() {
+        console.log("recordAudio():Audio Success");
+    }
+
+    // onError Callback 
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' + 
+              'message: ' + error.message + '\n');
+    }
+	
+	function setAudioPosition(position) {
+        document.getElementById('audio_position').innerHTML = position;
+    }
 	
 	function onback(){       
 		window.location.replace('menu.html'); 
@@ -54,8 +109,13 @@
 		<ul data-role="slider">Audio:</ul>
     	<table width="200" border="0" cellspacing="20">
 		  <tr>
-		    <td><img src="Imgs/ImgsGrabadora/btnrecOFF.png" alt="Record audio" onclick="" /></td>
-		    <td><img src="Imgs/ImgsGrabadora/btnplayOFF.png" alt="Play the audio" onclick="" /></td>
+		    <td><img src="Imgs/ImgsGrabadora/btnrecOFF.png" id="RecordOFF" alt="Record audio" onclick="startRecord();" /></td>
+			<td><img src="Imgs/ImgsGrabadora/btnrecON.png" 
+	            id="RecordON" hidden="true" alt="Stop recording" onclick="stopRecord();" /></td>
+                
+		    <td><img src="Imgs/ImgsGrabadora/btnplayOFF.png" id="playOFF" alt="Play the audio" onclick="playRecord();" /></td>
+            <td><img src="Imgs/ImgsGrabadora/btnplayON.png" 
+            	id="PlayON" hidden="true" alt="Stop the audio" onclick="stopPlay();" /></td>
 		  </tr>
 		</table>
         <br /><br />
@@ -66,7 +126,7 @@
 	    <p id="audio_position"></p>
     </div>
     
-    <div data-role="footer" data-id="navMenu" data-position="fixed">
+    <div data-role="footer" data-id="navMenu" data-position="fixed" data-ajax="false">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="index.html" data-role="button" data-icon="info">More</a></li>
