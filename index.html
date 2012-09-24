@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
    	<title>Main Menu</title>
     <meta charset="utf-8" />
@@ -7,133 +8,40 @@
 	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
 	<link rel="stylesheet" href="jquery-mobile/the-link.structure-1.0.min.css" />
 	<script src="jquery-mobile/jquery-1.6.4.min.js"></script>
-	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script> 
-
-
-<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
-<script type="text/javascript">
-	var AP;
-    function onstart() {
-		AP = Math.floor((Math.random()*10)+1);	
-	}
-	   
-	function toConnect() {     
-		$.mobile.changePage('connect.html?'+AP);  
-    }
-		
-	function toCamera() {       
-		$.mobile.changePage('camera.html?'+AP); 
-	}
-		
-	function toAudio() {      
-		$.mobile.changePage('audio.html?'+AP); 
-	}
-		
-	function onback() {       
-		window.close();
-	}
+	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script>
 	
-//Connect with spirits
+	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script> 
+	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
+	<script type="text/javascript" charset="utf-8" src="audio.js"></script>
 	
-	function loading(){	
-		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
-			window.location.replace('chat.html?'+$('#name').val()); 
-			
-		else {
-			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
-			$('#msg').text("Connection Failed. Try again later or seek for someone else");
-			$('#msg').attr('style','color:#FA5882');
-			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="camarita.js"></script>	
+	<script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/contacts.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/events.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/file.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/storage.js"></script> 	
+
+	<style type="text/css">
+    	body {
+			background-image: url(Imgs/ImgsMenu/fondo.png);
+			background-repeat: repeat;
 		}
-	
-	}
-	
-//Audio recorder
-
-	document.addEventListener("deviceready", onDeviceReady, false);
-
-	
-	var state = 0; // 0 record, 1 stop, 2 playback   
-	var src = "recording.mp3"; // name of auio file
-	var mediaRec; // the object for recording and play sound
-	
-	var directory; // holds a reference for directory reading
-	function connect(){
-	    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
-		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
-		$('#load').removeAttr('hidden');
-		$('#msg').removeAttr('hidden');
-		window.setTimeout('loading()',4000);
-	}
-	function recordAudio() {
-        mediaRec = new Media(src, onSuccess, onError);
-		$('#RecordOFF').attr('hidden','true');
-		$('#RecordON').attr('hidden','false');
-		
-        // Record audio
-        mediaRec.startRecord();
-
-        // Stop recording after 10 sec
-        var recTime = 0;
-        var recInterval = setInterval(function() {
-            recTime = recTime + 1;
-            setAudioPosition(recTime + " sec");
-            if (recTime >= 10) {
-                clearInterval(recInterval);
-                mediaRec.stopRecord();
-            }
-        }, 1000);
-    }
-	
-	function stopRecord (){
-		mediaRec.stopRecord();
-		$('#RecordOFF').removeAttr("hidden");
-		$('#RecordON').attr('hidden','true');
-	}
-	
-	function playRecord (){
-		if (mediaRec) 
-			mediaRec.play();
-		$('#PlayOFF').attr('hidden','true');
-		$('#PlayON').removeAttr('hidden');
-	}
-	
-	function stopPlay (){
-		if (mediaRec) 
-			mediaRec.stop();
-		$('#PlayOFF').removeAttr('hidden');
-		$('#PlayON').attr('hidden','true');
-	}
-	
-	function onSuccess() {
-        console.log("recordAudio():Audio Success");
-    }
-
-    // onError Callback 
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' + 
-              'message: ' + error.message + '\n');
-    }
-	
-	function setAudioPosition(position) {
-        document.getElementById('audio_position').innerHTML = position;
-    }
-</script>
+    	.title {
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+    	body,td,th {
+			color: #FFF;
+		}
+	</style>
 </head>
-
-<style type="text/css">
-    body {
-		background-image: url(Imgs/ImgsMenu/fondo.png);
-		background-repeat: repeat;
-	}
-    .title {
-		font-family: Tahoma, Geneva, sans-serif;
-	}
-    body,td,th {
-		color: #FFF;
-	}
-</style>
 
 <body onload="onstart()">
 <div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
@@ -145,9 +53,9 @@
     </div>
     
 	<div data-role="content" align="center">
-    	<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /><br /><br />
-    	<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /><br /><br />
-		<a href="audio.html"><img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" /></a><br /><br />
+    	<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /> <br /><br />
+    	<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /> <br /><br />
+		<img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" onclick="toAudio();" /> <br /><br />
 	</div>
     
     <div data-role="footer" data-id="navMenu" data-position="fixed">
