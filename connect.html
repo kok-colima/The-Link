@@ -12,7 +12,7 @@
 
 <script type="text/javascript">  
 	function onback(){       
-		$.mobile.changePage('menu.html'); 
+		//window.location.replace('menu.html'); 
     }
 	
 	function connect(){
@@ -20,10 +20,23 @@
 		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
 		$('#load').removeAttr('hidden');
 		$('#msg').removeAttr('hidden');
-		window.setTimeout('loading()',4000);
+		$.delay(1000, function(){
+			$('#msg').text("asda");
+     /*   
+		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
+			$.mobile.changePage('chat.html?'+$('#name').val()); 
+			
+		else {
+			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
+			$('#msg').text("Connection Failed. Try again later or seek for someone else");
+			$('#msg').attr('style','color:#FA5882');
+			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
+		}*/
+});
+		//window.setTimeout('loading()',4000);
 	}
 	
-	function loading(){	
+	/*function loading(){	
 		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
 			$.mobile.changePage('chat.html?'+$('#name').val()); 
 			
@@ -34,6 +47,10 @@
 			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
 		}
 	
+	}
+	*/
+	function toCamera() {       
+		$.mobile.changePage('index.html'); 
 	}
 </script>
 
@@ -61,7 +78,7 @@
     
   	<div data-role="content">
 		<input name="textinput" type="text" class="ui-input-text" id="name" placeholder="Type the spirit's name"/><br /><br />
-		<img id="btcnt" name="btcnt"src="Imgs/ImgsConnect/connectOFF.png" onclick="connect();" ><br /><br />
+		<img id="btcnt" name="btcnt"src="Imgs/ImgsConnect/connectOFF.png" onclick="connect();" /><br /><br />
 		<img src="" width="100" height="100" alt="loading" id="load" name="load" hidden="true" /><br /><br />
 		<label id="msg"  style=" color:#FFF" hidden="true">Connecting...</label>
 	</div>
