@@ -14,11 +14,40 @@
 <script type="text/javascript">
 
  
-	function onload(){
+function onload(){
 		
 var obj=cjson();
+var miku;
+var n = Math.floor((Math.random()*4)+1);	
+var hola;
 
-alert(obj.conversacion.hola.guion[2].texto);
+switch(n)
+{
+case 1:
+  hola=1101;
+  break;
+case 2:
+  hola=1201;
+case 3:
+  hola=1301;
+  break;
+default:
+  hola=1401;
+}
+
+
+
+
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==hola)
+	   {
+		miku=obj.conversacion.hola.guion[i].texto;
+		break;
+	   }
+	}
+
+alert(miku);
 
 		var name = new Array();
 		name=window.location.search.substr(1).split("?");
@@ -62,7 +91,7 @@ alert(obj.conversacion.hola.guion[2].texto);
 </style>
 
 <body onload="onload()">
-<div data-role="page" id="conect" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+<div data-role="page" id="conect" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF" align="center">
 
     <div data-role="header">
     	<a href="index.html" data-icon="delete">Close</a>
@@ -70,8 +99,9 @@ alert(obj.conversacion.hola.guion[2].texto);
         <a href="index.html" data-icon="refresh">Refresh</a>
     </div>
 
-	<div data-role="content">
+	<div data-role="content" >
 		<h4 id="cosa">lalala</h4>
+        <p><canvas id="msg" width="400"></canvas></p>
         <p><canvas id="btn1" width="400"></canvas></p>
 		<p><canvas id="btn2" width="400"></canvas></p>
 	</div>
