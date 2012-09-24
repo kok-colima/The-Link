@@ -19,7 +19,7 @@ var idr1;
 var idr2;
 var obj=cjson();
 var stage=4;
-
+var esc;
 function onload(){
 var n = Math.floor((Math.random()*stage)+1);	
 var hola;
@@ -109,6 +109,8 @@ chat1.onload = function(){
 
 	}
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function clickres()
     {
 //obtenemos los canvas		
@@ -154,6 +156,7 @@ if(obj.conversacion.hola.guion[i].id==respuesta1[1])
 fantasma=obj.conversacion.hola.guion[i].texto;
 idr1=obj.conversacion.hola.guion[i].siguiente1;
 idr2=obj.conversacion.hola.guion[i].siguiente2;
+esc=obj.conversacion.hola.guion[i].fin; 
 		break;
 	   }
 	}
@@ -167,7 +170,15 @@ chat4.onload = function(){
 			msg3.fillStyle = "#fff";
 			msg3.fillText(fantasma,110,50);
 }	
-	//obtenemos primer respuesta
+	
+//si termina la conversasion manda al creepy pasta
+		    if((esc=="next")||(esc=="si"))
+		    {
+			window.setTimeout('gocreepy()',3000);
+			}
+
+	
+//obtenemos primer respuesta
 for(var i=0;i<100;i++)
 {
 	if(obj.conversacion.hola.guion[i].id==idr1)
@@ -202,7 +213,13 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 			btn2.fillStyle = "#fff";
 			btn2.fillText(respuesta2[0],110,50);
 		}
+
+
 	}
+	
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 function clickres2()
     {
@@ -240,6 +257,7 @@ chat1.onload = function(){
 }		
 window.setTimeout('clickresf2()',3000);
 	}
+	
 function clickresf2(){		
 //obtenemos la pregunta del fantasma
 for(var i=0;i<100;i++)
@@ -249,6 +267,7 @@ if(obj.conversacion.hola.guion[i].id==respuesta2[1])
 fantasma=obj.conversacion.hola.guion[i].texto;
 idr1=obj.conversacion.hola.guion[i].siguiente1;
 idr2=obj.conversacion.hola.guion[i].siguiente2;
+esc=obj.conversacion.hola.guion[i].fin; 
 		break;
 	   }
 	}
@@ -262,6 +281,12 @@ chat4.onload = function(){
 			msg3.fillText(fantasma,110,50);
 }	
 
+//si termina la conversasion manda al creepy pasta
+		if((esc=="next")||(esc=="si"))
+		    {
+			window.setTimeout('gocreepy()',3000);
+			}
+			
 //obtenemos primer respuesta
 for(var i=0;i<100;i++)
 {
@@ -282,6 +307,7 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 		break;
 	   }
 	}
+	
 //respuestas
 		var img1 = new Image();
 		img1.src = 'Imgs/ImgsConnect/btnchat.png';
@@ -297,8 +323,12 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 			btn2.fillStyle = "#fff";
 			btn2.fillText(respuesta2[0],110,50);
 		}
-	}	
+		
 
+	}	
+	function gocreepy(){       
+		window.location.replace('Creepy.html'); 
+	}
 	function onback(){       
 		window.location.replace('menu.html'); 
 	}
@@ -331,7 +361,7 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
   <p><canvas id="msg" width="500"></canvas><br/>     <canvas id="msg2" width="500"></canvas><br/>
      <canvas id="msg3" width="500"></canvas>
         </p>
-        <canvas id="btn1" width="400" onclick="clickres();"></canvas>
+        <canvas id="btn1" width="400" onclick="clickres();"></canvas><br/>
 		<canvas id="btn2" width="400" onclick="clickres2();"></canvas>
 	</div>
     
