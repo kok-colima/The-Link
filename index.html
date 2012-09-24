@@ -8,8 +8,9 @@
 	<link rel="stylesheet" href="jquery-mobile/the-link.structure-1.0.min.css" />
 	<script src="jquery-mobile/jquery-1.6.4.min.js"></script>
 	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script> 
-</head>
 
+
+<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
 <script type="text/javascript">
 	var AP;
     function onstart() {
@@ -33,13 +34,6 @@
 	}
 	
 //Connect with spirits
-	function connect(){
-	    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
-		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
-		$('#load').removeAttr('hidden');
-		$('#msg').removeAttr('hidden');
-		window.setTimeout('loading()',4000);
-	}
 	
 	function loading(){	
 		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
@@ -55,6 +49,22 @@
 	}
 	
 //Audio recorder
+
+	document.addEventListener("deviceready", onDeviceReady, false);
+
+	
+	var state = 0; // 0 record, 1 stop, 2 playback   
+	var src = "recording.mp3"; // name of auio file
+	var mediaRec; // the object for recording and play sound
+	
+	var directory; // holds a reference for directory reading
+	function connect(){
+	    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
+		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
+		$('#load').removeAttr('hidden');
+		$('#msg').removeAttr('hidden');
+		window.setTimeout('loading()',4000);
+	}
 	function recordAudio() {
         mediaRec = new Media(src, onSuccess, onError);
 		$('#RecordOFF').attr('hidden','true');
@@ -74,7 +84,43 @@
             }
         }, 1000);
     }
+	
+	function stopRecord (){
+		mediaRec.stopRecord();
+		$('#RecordOFF').removeAttr("hidden");
+		$('#RecordON').attr('hidden','true');
+	}
+	
+	function playRecord (){
+		if (mediaRec) 
+			mediaRec.play();
+		$('#PlayOFF').attr('hidden','true');
+		$('#PlayON').removeAttr('hidden');
+	}
+	
+	function stopPlay (){
+		if (mediaRec) 
+			mediaRec.stop();
+		$('#PlayOFF').removeAttr('hidden');
+		$('#PlayON').attr('hidden','true');
+	}
+	
+	function onSuccess() {
+        console.log("recordAudio():Audio Success");
+    }
+
+    // onError Callback 
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' + 
+              'message: ' + error.message + '\n');
+    }
+	
+	function setAudioPosition(position) {
+        document.getElementById('audio_position').innerHTML = position;
+    }
 </script>
+</head>
 
 <style type="text/css">
     body {
