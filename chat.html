@@ -12,15 +12,23 @@
 </head>
 
 <script type="text/javascript">
-
- 
-function onload(){
-		
+var respuesta1 = new Array();
+var respuesta2 = new Array();
+var fantasma;
+var idr1;
+var idr2;
 var obj=cjson();
-var miku;
-var n = Math.floor((Math.random()*4)+1);	
-var hola;
+var stage=4;
 
+function onload(){
+var n = Math.floor((Math.random()*stage)+1);	
+var hola;
+//Colocamos el nombre del fantasma
+		var name = new Array();
+		name=window.location.search.substr(1).split("?");
+		$('#spirit').text(name[0]);
+		
+//Seleccionamos el camino de Hola		
 switch(n)
 {
 case 1:
@@ -35,27 +43,55 @@ default:
   hola=1401;
 }
 
-
-
-
+//obtenemos la pregunta
 for(var i=0;i<100;i++)
 {
 	if(obj.conversacion.hola.guion[i].id==hola)
 	   {
-		miku=obj.conversacion.hola.guion[i].texto;
+fantasma=obj.conversacion.hola.guion[i].texto;
+idr1=obj.conversacion.hola.guion[i].siguiente1;
+idr2=obj.conversacion.hola.guion[i].siguiente2;
 		break;
 	   }
 	}
+//obtenemos primer respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr1)
+	   {
+respuesta1[0]=obj.conversacion.hola.guion[i].texto;
+respuesta1[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+//obtenemos la segunda respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr2)
+	   {
+respuesta2[0]=obj.conversacion.hola.guion[i].texto;
+respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+//comenzamos a pintar
+msg = document.getElementById('msg').getContext('2d');
+msg2 = document.getElementById('msg2').getContext('2d');
+msg3 = document.getElementById('msg3').getContext('2d');
+btn1 = document.getElementById('btn1').getContext('2d');
+btn2 = document.getElementById('btn2').getContext('2d');
+	
 
-alert(miku);
-
-		var name = new Array();
-		name=window.location.search.substr(1).split("?");
-		$('#spirit').text(name[0]);
-
-		var btn1 = document.getElementById('btn1').getContext('2d');
-		var btn2 = document.getElementById('btn2').getContext('2d');
-
+//pregunta
+var chat1 = new Image();
+chat1.src = 'Imgs/ImgsConnect/dialog2.png';
+chat1.onload = function(){
+			msg.drawImage(chat1,0,0);
+			msg.font="bold italic 20px Arial";
+			msg.fillStyle = "#fff";
+			msg.fillText(fantasma,110,50);
+}
+//respuestas
 		var img1 = new Image();
 		img1.src = 'Imgs/ImgsConnect/btnchat.png';
 		
@@ -63,15 +99,186 @@ alert(miku);
 			btn1.drawImage(img1,0,0);
 			btn1.font="bold italic 20px Arial";
 			btn1.fillStyle = "#fff";
-			btn1.fillText("Hola, Como te llamas?",110,50);
+			btn1.fillText(respuesta1[0],110,50);
    
 			btn2.drawImage(img1,0,0);
 			btn2.font="bold italic 20px Arial";
 			btn2.fillStyle = "#fff";
-			btn2.fillText("Vete Ben feo",110,50);
+			btn2.fillText(respuesta2[0],110,50);
 		}
 
 	}
+	
+function clickres()
+    {
+//obtenemos los canvas		
+msg = document.getElementById('msg').getContext('2d');
+msg2 = document.getElementById('msg2').getContext('2d');
+msg3 = document.getElementById('msg3').getContext('2d');
+btn1 = document.getElementById('btn1').getContext('2d');
+btn2 = document.getElementById('btn2').getContext('2d');	
+	
+//limpiamos los canvas	
+	
+msg2.clearRect(0,0,600,600);
+msg3.clearRect(0,0,600,600);
+btn1.clearRect(0,0,600,600);
+btn2.clearRect(0,0,600,600);
+
+//dibujamos la respuesta del fantasma
+var chat3 = new Image();
+chat3.src = 'Imgs/ImgsConnect/dialog1.png';
+chat3.onload = function(){
+			msg2.drawImage(chat3,0,0);
+			msg2.font="bold italic 20px Arial";
+			msg2.fillStyle = "#fff";
+			msg2.fillText(respuesta1[0],110,50);
+}		
+window.setTimeout('clickresf()',3000);
+	}
+function clickresf(){
+//obtenemos la pregunta del fantasma
+for(var i=0;i<100;i++)
+{
+if(obj.conversacion.hola.guion[i].id==respuesta1[1])
+	   {
+fantasma=obj.conversacion.hola.guion[i].texto;
+idr1=obj.conversacion.hola.guion[i].siguiente1;
+idr2=obj.conversacion.hola.guion[i].siguiente2;
+		break;
+	   }
+	}
+//dibujamos la respuesta del fantasma
+
+var chat4 = new Image();
+chat4.src = 'Imgs/ImgsConnect/dialog2.png';
+chat4.onload = function(){
+			msg3.drawImage(chat4,0,0);
+			msg3.font="bold italic 20px Arial";
+			msg3.fillStyle = "#fff";
+			msg3.fillText(fantasma,110,50);
+}	
+	//obtenemos primer respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr1)
+	   {
+respuesta1[0]=obj.conversacion.hola.guion[i].texto;
+respuesta1[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+//obtenemos la segunda respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr2)
+	   {
+respuesta2[0]=obj.conversacion.hola.guion[i].texto;
+respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+//respuestas
+		var img1 = new Image();
+		img1.src = 'Imgs/ImgsConnect/btnchat.png';
+		
+		img1.onload = function(){
+			btn1.drawImage(img1,0,0);
+			btn1.font="bold italic 20px Arial";
+			btn1.fillStyle = "#fff";
+			btn1.fillText(respuesta1[0],110,50);
+   
+			btn2.drawImage(img1,0,0);
+			btn2.font="bold italic 20px Arial";
+			btn2.fillStyle = "#fff";
+			btn2.fillText(respuesta2[0],110,50);
+		}
+	}
+	
+function clickres2()
+    {
+//obtenemos los canvas		
+msg = document.getElementById('msg').getContext('2d');
+msg2 = document.getElementById('msg2').getContext('2d');
+msg3 = document.getElementById('msg3').getContext('2d');
+btn1 = document.getElementById('btn1').getContext('2d');
+btn2 = document.getElementById('btn2').getContext('2d');
+
+//limpiamos los canvas
+	msg2.clearRect(0,0,600,600);
+    msg3.clearRect(0,0,600,600);
+	btn1.clearRect(0,0,600,600);
+    btn2.clearRect(0,0,600,600);	
+//dibujamos la respuesta del fantasma
+var chat3 = new Image();
+chat3.src = 'Imgs/ImgsConnect/dialog1.png';
+chat3.onload = function(){
+			msg2.drawImage(chat3,0,0);
+			msg2.font="bold italic 20px Arial";
+			msg2.fillStyle = "#fff";
+			msg2.fillText(respuesta2[0],110,50);
+}		
+window.setTimeout('clickresf2()',3000);
+	}
+function clickresf2(){		
+//obtenemos la pregunta del fantasma
+for(var i=0;i<100;i++)
+{
+if(obj.conversacion.hola.guion[i].id==respuesta2[1])
+	   {
+fantasma=obj.conversacion.hola.guion[i].texto;
+idr1=obj.conversacion.hola.guion[i].siguiente1;
+idr2=obj.conversacion.hola.guion[i].siguiente2;
+		break;
+	   }
+	}
+//dibujamos la respuesta del fantasma
+var chat4 = new Image();
+chat4.src = 'Imgs/ImgsConnect/dialog2.png';
+chat4.onload = function(){
+			msg3.drawImage(chat4,0,0);
+			msg3.font="bold italic 20px Arial";
+			msg3.fillStyle = "#fff";
+			msg3.fillText(fantasma,110,50);
+}	
+
+//obtenemos primer respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr1)
+	   {
+respuesta1[0]=obj.conversacion.hola.guion[i].texto;
+respuesta1[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+//obtenemos la segunda respuesta
+for(var i=0;i<100;i++)
+{
+	if(obj.conversacion.hola.guion[i].id==idr2)
+	   {
+respuesta2[0]=obj.conversacion.hola.guion[i].texto;
+respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
+		break;
+	   }
+	}
+//respuestas
+		var img1 = new Image();
+		img1.src = 'Imgs/ImgsConnect/btnchat.png';
+		
+		img1.onload = function(){
+			btn1.drawImage(img1,0,0);
+			btn1.font="bold italic 20px Arial";
+			btn1.fillStyle = "#fff";
+			btn1.fillText(respuesta1[0],110,50);
+   
+			btn2.drawImage(img1,0,0);
+			btn2.font="bold italic 20px Arial";
+			btn2.fillStyle = "#fff";
+			btn2.fillText(respuesta2[0],110,50);
+		}
+	}	
+		
 	function onback(){       
 		window.location.replace('menu.html'); 
 	}
@@ -100,10 +307,12 @@ alert(miku);
     </div>
 
 	<div data-role="content" >
-		<h4 id="cosa">lalala</h4>
-        <p><canvas id="msg" width="400"></canvas></p>
-        <p><canvas id="btn1" width="400"></canvas></p>
-		<p><canvas id="btn2" width="400"></canvas></p>
+		
+  <p><canvas id="msg" width="500"></canvas><br/>     <canvas id="msg2" width="500"></canvas><br/>
+     <canvas id="msg3" width="500"></canvas>
+        </p>
+        <canvas id="btn1" width="400" onclick="clickres();"></canvas>
+		<canvas id="btn2" width="400" onclick="clickres2();"></canvas>
 	</div>
     
     <div data-role="footer" data-id="navMenu" data-position="fixed">
