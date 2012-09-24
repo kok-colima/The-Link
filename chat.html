@@ -119,7 +119,7 @@ btn1 = document.getElementById('btn1').getContext('2d');
 btn2 = document.getElementById('btn2').getContext('2d');	
 
 //limpiamos los canvas	
-
+msg.clearRect(0,0,600,600);
 msg2.clearRect(0,0,600,600);
 msg3.clearRect(0,0,600,600);
 btn1.clearRect(0,0,600,600);
@@ -133,7 +133,16 @@ chat3.onload = function(){
 			msg2.font="bold italic 20px Arial";
 			msg2.fillStyle = "#fff";
 			msg2.fillText(respuesta1[0],110,50);
-}		
+}
+			//pregunta anterior
+var chat1 = new Image();
+chat1.src = 'Imgs/ImgsConnect/dialog2.png';
+chat1.onload = function(){
+			msg.drawImage(chat1,0,0);
+			msg.font="bold italic 20px Arial";
+			msg.fillStyle = "#fff";
+			msg.fillText(fantasma,110,50);}
+					
 window.setTimeout('clickresf()',3000);
 	}
 function clickresf(){
@@ -205,6 +214,7 @@ btn1 = document.getElementById('btn1').getContext('2d');
 btn2 = document.getElementById('btn2').getContext('2d');
 
 //limpiamos los canvas
+    msg.clearRect(0,0,600,600);
 	msg2.clearRect(0,0,600,600);
     msg3.clearRect(0,0,600,600);
 	btn1.clearRect(0,0,600,600);
@@ -217,6 +227,16 @@ chat3.onload = function(){
 			msg2.font="bold italic 20px Arial";
 			msg2.fillStyle = "#fff";
 			msg2.fillText(respuesta2[0],110,50);
+			
+			//pregunta anterior
+var chat1 = new Image();
+chat1.src = 'Imgs/ImgsConnect/dialog2.png';
+chat1.onload = function(){
+			msg.drawImage(chat1,0,0);
+			msg.font="bold italic 20px Arial";
+			msg.fillStyle = "#fff";
+			msg.fillText(fantasma,110,50);
+}
 }		
 window.setTimeout('clickresf2()',3000);
 	}
