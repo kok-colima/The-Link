@@ -72,7 +72,7 @@ var json = jQuery.parseJSON('{\
           "id": "1109",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "Oh I get it,\ but how do you do that?",\
+          "texto": "Oh I get it, but how do you do that?",\
           "siguiente1": "1112",\
           "siguiente2": "1107"\
         },\
@@ -80,7 +80,7 @@ var json = jQuery.parseJSON('{\
           "id": "1110",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "Why? you need something? because play with paranormal stuff isn´t that fun",\
+          "texto": "Why? you need something? <br/> because play with paranormal <br/> stuff isn´t that fun",\
           "siguiente1": "1113",\
           "siguiente2": "1108"\
         },\
@@ -88,7 +88,7 @@ var json = jQuery.parseJSON('{\
           "id": "1111",\
           "tipo": "pregunta",\
           "fin": "next",\
-          "texto": "But I don´t. Play with this kind of things is dangerous,\ to me and to you",\
+          "texto": "But I don´t. Play with this kind of things is dangerous, to me and to you",\
           "siguiente1": "-",\
           "siguiente2": "-"\
         },\
@@ -96,7 +96,7 @@ var json = jQuery.parseJSON('{\
           "id": "1112",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "It doesn´t matter,\ I want to talk with you",\
+          "texto": "It doesn´t matter, I want to talk with you",\
           "siguiente1": "1114",\
           "siguiente2": "-"\
         },\
@@ -104,7 +104,7 @@ var json = jQuery.parseJSON('{\
           "id": "1113",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "No,\ I´m just playing",\
+          "texto": "No, I´m just playing",\
           "siguiente1": "1115",\
           "siguiente2": "-"\
         },\
@@ -112,7 +112,7 @@ var json = jQuery.parseJSON('{\
           "id": "1114",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "Thanks,\ but you know that I´m already dead and that means you have to continue by your own",\
+          "texto": "Thanks, but you know that  I´m already <br/> dead and that means you have to <br/> continue by your own",\
           "siguiente1": "1116",\
           "siguiente2": "1117"\
         },\
@@ -120,7 +120,7 @@ var json = jQuery.parseJSON('{\
           "id": "1115",\
           "tipo": "pregunta",\
           "fin": "next",\
-          "texto": "This is not so funny,\ playing with dead is dangerous you must stop",\
+          "texto": "This is not so funny, playing with dead is  dangerous you must stop",\
           "siguiente1": "-",\
           "siguiente2": "-"\
         },\
@@ -136,7 +136,7 @@ var json = jQuery.parseJSON('{\
           "id": "1117",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "I don´t want things to be like this",\
+          "texto": "I don´t want things  to be like this",\
           "siguiente1": "1117",\
           "siguiente2": "-"\
         },\
@@ -144,7 +144,7 @@ var json = jQuery.parseJSON('{\
           "id": "1118",\
           "tipo": "pregunta",\
           "fin": "si",\
-          "texto": "I´m glad to see you and one day we will meet again but not now. Bood bye.",\
+          "texto": "I´m glad to see you  and one day we will meet  again but not now. Bood bye.",\
           "siguiente1": "-",\
           "siguiente2": "-"\
         },\
@@ -152,7 +152,7 @@ var json = jQuery.parseJSON('{\
           "id": "1119",\
           "tipo": "pregunta",\
           "fin": "next",\
-          "texto": "Listen,\ there are time for everything but not now. This place is dangerous.",\
+          "texto": "Listen, there are time for everything but not now. This place is dangerous.",\
           "siguiente1": "-",\
           "siguiente2": "-"\
         },\
@@ -168,7 +168,7 @@ var json = jQuery.parseJSON('{\
           "id": "1202",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "Hello,\ can you hear me?",\
+          "texto": "Hello, can you hear me?",\
           "siguiente1": "1204",\
           "siguiente2": "-"\
         },\
@@ -176,7 +176,7 @@ var json = jQuery.parseJSON('{\
           "id": "1203",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "Hi,\ are you a ghost?",\
+          "texto": "Hi, are you a ghost?",\
           "siguiente1": "1205",\
           "siguiente2": "-"\
         },\
@@ -200,7 +200,7 @@ var json = jQuery.parseJSON('{\
           "id": "1206",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "I bring you back with this app",\
+          "texto": "I bring you back  with this app",\
           "siguiente1": "1209",\
           "siguiente2": "-"\
         },\
@@ -224,7 +224,7 @@ var json = jQuery.parseJSON('{\
           "id": "1209",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "But do you need something? because stay here is dangerous to me and to you",\
+          "texto": "But do you need something?  because stay here is dangerous  to me and to you",\
           "siguiente1": "1212",\
           "siguiente2": "1208"\
         },\
@@ -232,7 +232,7 @@ var json = jQuery.parseJSON('{\
           "id": "1210",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "Listen,\ I already die and the correct is let me rest in peace,\ continue with your life,\ you have one to live it",\
+          "texto": "Listen, I already die and  the correct is let me rest in peace, continue with your life, you have one to live it",\
           "siguiente1": "1212",\
           "siguiente2": "1213"\
         },\
@@ -240,7 +240,7 @@ var json = jQuery.parseJSON('{\
           "id": "1211",\
           "tipo": "pregunta",\
           "fin": "next",\
-          "texto": "What?! This is just a game to you? Do you understand that play with the unknown is dangerous?",\
+          "texto": "What?! This is just a game to you? Do you understand that play  with the unknown is dangerous?",\
           "siguiente1": "-",\
           "siguiente2": "-"\
         },\
@@ -248,7 +248,7 @@ var json = jQuery.parseJSON('{\
           "id": "1212",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "I want to know how you doing there",\
+          "texto": "I want to know  how you doing there",\
           "siguiente1": "1214",\
           "siguiente2": "-"\
         },\
@@ -264,7 +264,7 @@ var json = jQuery.parseJSON('{\
           "id": "1214",\
           "tipo": "pregunta",\
           "fin": "next",\
-          "texto": "Oh,\ well,\ it´s fine,\ but there one doesn´t care about that kind of things,\ one doesn´t care about anything. But I´m worry now,\ because and for you. This is not as safe as you think.",\
+          "texto": "Oh, well, it´s fine, but there  one doesn´t care about that  kind of things, one doesn´t care  about anything. But I´m worry now, because and for you. This is not  as safe as you think.",\
           "siguiente1": "-",\
           "siguiente2": "-"\
         },\
@@ -272,7 +272,7 @@ var json = jQuery.parseJSON('{\
           "id": "1215",\
           "tipo": "pregunta",\
           "fin": "si",\
-          "texto": "Thank you,\ one day but not now we will met again",\
+          "texto": "Thank you, one day but  not now we will met again",\
           "siguiente1": "1117",\
           "siguiente2": "-"\
         },\
@@ -312,7 +312,7 @@ var json = jQuery.parseJSON('{\
           "id": "1305",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "Oh that´s a really dumb reason to play with paranormal",\
+          "texto": "Oh that´s a really dumb reason  to play with paranormal",\
           "siguiente1": "1306",\
           "siguiente2": "1308"\
         },\
@@ -344,7 +344,7 @@ var json = jQuery.parseJSON('{\
           "id": "1309",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "Bring me back is not a good idea,\ you will have time in future for that but now enjoy your life",\
+          "texto": "Bring me back is not a good idea, you will have time in future  for that but now enjoy your life",\
           "siguiente1": "1308",\
           "siguiente2": "1311"\
         },\
@@ -352,7 +352,7 @@ var json = jQuery.parseJSON('{\
           "id": "1310",\
           "tipo": "pregunta",\
           "fin": "no",\
-          "texto": "To be honest,\ nothing,\ you stop caring about anything,\ that´s why they call it rest,\ but now that you bring me here I´m worry for you",\
+          "texto": "To be honest, nothing, you stop  caring about anything, that´s why  they call it rest, but now that   you bring  me here I´m worry for you",\
           "siguiente1": "1312",\
           "siguiente2": "1313"\
         },\
@@ -384,7 +384,7 @@ var json = jQuery.parseJSON('{\
           "id": "1314",\
           "tipo": "pregunta",\
           "fin": "si",\
-          "texto": "Thanks and good bye. Remmember,\ dead is just a different way but that doesn´t mean you need to rush to walk it,\ there is time for everything. Bye.",\
+          "texto": "Thanks and good bye. Remmember, dead is just a different way but  that doesn´t mean you need to rush  to walk it, there is time for everything. Bye.",\
           "siguiente1": "-",\
           "siguiente2": "-"\
         },\
@@ -804,7 +804,7 @@ var json = jQuery.parseJSON('{\
           "id": "2212",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "Ok,\ I want to try",\
+          "texto": "Ok, I want to try",\
           "siguiente1": "2209",\
           "siguiente2": "-"\
         },\
@@ -812,7 +812,7 @@ var json = jQuery.parseJSON('{\
           "id": "2213",\
           "tipo": "respuesta",\
           "fin": "no",\
-          "texto": "No,\ I let you go",\
+          "texto": "No, I let you go",\
           "siguiente1": "2209",\
           "siguiente2": "-"\
         },\

@@ -89,7 +89,20 @@ chat1.onload = function(){
 			msg.drawImage(chat1,0,0);
 			msg.font="bold italic 20px Arial";
 			msg.fillStyle = "#fff";
-			msg.fillText(fantasma,110,50);
+			
+    var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 36; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < fantasma.length)
+    {
+    str = fantasma.substr(start,jumpAt);
+    start += jumpAt;
+    msg.fillText(str, 70, 35+(lineHeight*currentLine++));
+    }
+
 }
 //respuestas
 		var img1 = new Image();
@@ -99,12 +112,35 @@ chat1.onload = function(){
 			btn1.drawImage(img1,0,0);
 			btn1.font="bold italic 20px Arial";
 			btn1.fillStyle = "#fff";
-			btn1.fillText(respuesta1[0],110,50);
    
+    var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 35; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta1[0].length)
+    {
+    str = respuesta1[0].substr(start,jumpAt);
+    start += jumpAt;
+    btn1.fillText(str, 20, 35+(lineHeight*currentLine++));
+    }
 			btn2.drawImage(img1,0,0);
 			btn2.font="bold italic 20px Arial";
 			btn2.fillStyle = "#fff";
-			btn2.fillText(respuesta2[0],110,50);
+			
+    var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 35; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta2[0].length)
+    {
+    str = respuesta2[0].substr(start,jumpAt);
+    start += jumpAt;
+    btn2.fillText(str, 20, 35+(lineHeight*currentLine++));
+    }
 		}
 
 	}
@@ -134,7 +170,19 @@ chat3.onload = function(){
 			msg2.drawImage(chat3,0,0);
 			msg2.font="bold italic 20px Arial";
 			msg2.fillStyle = "#fff";
-			msg2.fillText(respuesta1[0],110,50);
+						
+    var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 36; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta1[0].length)
+    {
+    str = respuesta1[0].substr(start,jumpAt);
+    start += jumpAt;
+    msg2.fillText(str, 70, 35+(lineHeight*currentLine++));
+    }			
 }
 			//pregunta anterior
 var chat1 = new Image();
@@ -143,7 +191,20 @@ chat1.onload = function(){
 			msg.drawImage(chat1,0,0);
 			msg.font="bold italic 20px Arial";
 			msg.fillStyle = "#fff";
-			msg.fillText(fantasma,110,50);}
+					
+    var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 36; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < fantasma.length)
+    {
+    str = fantasma.substr(start,jumpAt);
+    start += jumpAt;
+    msg.fillText(str, 70, 35+(lineHeight*currentLine++));
+    }			
+	}
 					
 window.setTimeout('clickresf()',3000);
 	}
@@ -168,7 +229,19 @@ chat4.onload = function(){
 			msg3.drawImage(chat4,0,0);
 			msg3.font="bold italic 20px Arial";
 			msg3.fillStyle = "#fff";
-			msg3.fillText(fantasma,110,50);
+    
+	var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 36; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < fantasma.length)
+    {
+    str = fantasma.substr(start,jumpAt);
+    start += jumpAt;
+    msg3.fillText(str, 70, 35+(lineHeight*currentLine++));
+    }
 }	
 	
 //si termina la conversasion manda al creepy pasta
@@ -206,12 +279,34 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 			btn1.drawImage(img1,0,0);
 			btn1.font="bold italic 20px Arial";
 			btn1.fillStyle = "#fff";
-			btn1.fillText(respuesta1[0],110,50);
-   
+var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 35; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta1[0].length)
+    {
+    str = respuesta1[0].substr(start,jumpAt);
+    start += jumpAt;
+    btn1.fillText(str, 20, 35+(lineHeight*currentLine++));
+    }
 			btn2.drawImage(img1,0,0);
 			btn2.font="bold italic 20px Arial";
 			btn2.fillStyle = "#fff";
-			btn2.fillText(respuesta2[0],110,50);
+			
+    var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 35; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta2[0].length)
+    {
+    str = respuesta2[0].substr(start,jumpAt);
+    start += jumpAt;
+    btn2.fillText(str, 20, 35+(lineHeight*currentLine++));
+    }
 		}
 
 
@@ -243,7 +338,19 @@ chat3.onload = function(){
 			msg2.drawImage(chat3,0,0);
 			msg2.font="bold italic 20px Arial";
 			msg2.fillStyle = "#fff";
-			msg2.fillText(respuesta2[0],110,50);
+	
+	var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 36; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta2[0].length)
+    {
+    str = respuesta2[0].substr(start,jumpAt);
+    start += jumpAt;
+    msg2.fillText(str, 70, 35+(lineHeight*currentLine++));
+    }			
 			
 			//pregunta anterior
 var chat1 = new Image();
@@ -253,6 +360,19 @@ chat1.onload = function(){
 			msg.font="bold italic 20px Arial";
 			msg.fillStyle = "#fff";
 			msg.fillText(fantasma,110,50);
+			
+	var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 36; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < fantasma.length)
+    {
+    str = fantasma.substr(start,jumpAt);
+    start += jumpAt;
+    msg.fillText(str, 70, 35+(lineHeight*currentLine++));
+    }			
 }
 }		
 window.setTimeout('clickresf2()',3000);
@@ -278,7 +398,19 @@ chat4.onload = function(){
 			msg3.drawImage(chat4,0,0);
 			msg3.font="bold italic 20px Arial";
 			msg3.fillStyle = "#fff";
-			msg3.fillText(fantasma,110,50);
+	
+	var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 36; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < fantasma.length)
+    {
+    str = fantasma.substr(start,jumpAt);
+    start += jumpAt;
+    msg3.fillText(str, 70, 35+(lineHeight*currentLine++));
+    }
 }	
 
 //si termina la conversasion manda al creepy pasta
@@ -316,12 +448,34 @@ respuesta2[1]=obj.conversacion.hola.guion[i].siguiente1;
 			btn1.drawImage(img1,0,0);
 			btn1.font="bold italic 20px Arial";
 			btn1.fillStyle = "#fff";
-			btn1.fillText(respuesta1[0],110,50);
-   
+var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 35; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta1[0].length)
+    {
+    str = respuesta1[0].substr(start,jumpAt);
+    start += jumpAt;
+    btn1.fillText(str, 20, 35+(lineHeight*currentLine++));
+    }
 			btn2.drawImage(img1,0,0);
 			btn2.font="bold italic 20px Arial";
 			btn2.fillStyle = "#fff";
-			btn2.fillText(respuesta2[0],110,50);
+			
+    var start = 0; // Carácter por el que empezar
+    var currentLine = 0; // Línea que nos encontramos.
+    var jumpAt = 35; // Número de caracteres por línea.
+    var lineHeight = 20; // Ancho de cada línea.
+    var str; // Auxiliar donde guardar el texto partido.
+ 
+    while (start < respuesta2[0].length)
+    {
+    str = respuesta2[0].substr(start,jumpAt);
+    start += jumpAt;
+    btn2.fillText(str, 20, 35+(lineHeight*currentLine++));
+    }
 		}
 		
 
