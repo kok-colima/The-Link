@@ -4,7 +4,7 @@
 		}
 	   
 		function toConnect() {     
-			$.mobile.changePage('connect.html?'+10);  
+		window.location.replace('connect.html?'+10);  
 		}
 		
 		function toCamera() {       

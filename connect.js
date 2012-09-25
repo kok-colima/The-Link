@@ -9,9 +9,9 @@
 	}
 	
 	function loading(){	
-		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
-			window.location.replace('chat.html?'+$('#name').val()); 
-			
+		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!='')){
+window.location.replace('chat.html?'+$('#name').val()); 
+		}
 		else {
 			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
 			$('#msg').text("Connection Failed. Try again later or seek for someone else");
@@ -371,7 +371,6 @@ chat1.onload = function(){
 			msg.drawImage(chat1,0,0);
 			msg.font="bold italic 20px Arial";
 			msg.fillStyle = "#fff";
-			msg.fillText(fantasma,110,50);
 			
 	var start = 0; // Carácter por el que empezar
     var currentLine = 0; // Línea que nos encontramos.
