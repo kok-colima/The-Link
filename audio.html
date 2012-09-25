@@ -10,8 +10,8 @@
 	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script>
 	
 	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
 	<script type="text/javascript" charset="utf-8" src="audio.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
 	<script type="text/javascript" charset="utf-8" src="index.js"></script>
 
 	<style type="text/css">
@@ -32,7 +32,7 @@
 <div data-role="page" id="audio" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 	
 	<div data-role="header">
-    	<a href="index.html" data-icon="delete">Close</a>
+    	<a data-icon="delete" onclick="closeApp();">Close</a>
     	<h1 class="title"><em>Audio recorder</em></h1>
         <a href="index.html" data-icon="refresh">Refresh</a>
     </div>
@@ -43,12 +43,12 @@
 		  <tr>
 		    <td>
 				<img src="Imgs/ImgsGrabadora/btnrecOFF.png" id="RecordOFF" alt="Record audio" onclick="startRecord();" />
-				<img src="Imgs/ImgsGrabadora/btnrecON.png" id="RecordON" hidden="true" alt="Stop recording" onclick="stopRecord();" />
+				<img src="Imgs/ImgsGrabadora/btnrecON.png" hidden="true" id="RecordON" alt="Record audio" onclick="stopRecord();" />
             </td>
                 
 		    <td>
 				<img src="Imgs/ImgsGrabadora/btnplayOFF.png" id="PlayOFF" alt="Play the audio" onclick="playRecord();" />
-            	<img src="Imgs/ImgsGrabadora/btnplayON.png" id="PlayON" hidden="true" alt="Stop the audio" onclick="stopPlay();" />
+				<img src="Imgs/ImgsGrabadora/btnplayON.png" hidden="true" id="PlayON" alt="Play the audio" onclick="stopPlay();" />
 			</td>
 		  </tr>
 		</table>

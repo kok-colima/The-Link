@@ -1,42 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<title>Connect with spirits</title>
+   	<title>Main Menu</title>
     <meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="/jquery-mobile/the-link.min.css" />
-	<link rel="stylesheet" href="/jquery-mobile/the-link.structure-1.0.min.css" />
-	<script src="/jquery-mobile/jquery-1.6.4.min.js"></script>
-	<script src="/jquery-mobile/jquery.mobile-1.0.min.js"></script>
-
+	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
+	<link rel="stylesheet" href="jquery-mobile/the-link.structure-1.0.min.css" />
+	<script src="jquery-mobile/jquery-1.6.4.min.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script>
+	
 	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script> 
 	<script type="text/javascript" charset="utf-8" src="index.js"></script>
-	<script type="text/javascript" charset="utf-8" src="connect.js"></script>
-
+	<script type="text/javascript" charset="utf-8" src="jasonParser.js"></script>
+	<script type="text/javascript" charset="utf-8" src="connect.js"></script>	
+	
 	<style type="text/css">
-		body {
+    	body {
 			background-image: url(Imgs/ImgsMenu/fondo.png);
 			background-repeat: repeat;
 		}
-		.title {
+    	.title {
 			font-family: Tahoma, Geneva, sans-serif;
 		}
-		body,td,th {
+    	body,td,th {
 			color: #FFF;
 		}
 	</style>
 </head>
-
-<body>
+<body onload="ghostHunter();">
 <div data-role="page" id="connect" align="center" style="background-image: url(Imgs/ImgsMenu/fondo.png);">
 	
     <div data-role="header">
-    	<a href="index.html" data-icon="delete">Close</a>
+    	<a data-icon="delete" onclick="closeApp();">Close</a>
     	<h1 class="title"><em>Connect with spirits</em></h1>
         <a href="index.html" data-icon="refresh">Refresh</a>
     </div>
     
   	<div data-role="content">
+		<div id="APmeter"><img src="Imgs/ImgsMenu/ap4.png" id="oldAP" /></div><br /><br /><br />
 		<input name="textinput" type="text" class="ui-input-text" id="name" placeholder="Type the spirit's name"/><br /><br />
 		<img id="btcnt" src="Imgs/ImgsConnect/connectOFF.png" onclick="connect();" ><br /><br />
 		<img src="" alt="loading" id="load" hidden="true" /><br /><br />

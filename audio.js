@@ -3,49 +3,48 @@
     // Record audio
 	var state = 0; // 0 record, 1 stop, 2 playback   
 	var src = "recording.mp3"; // name of auio file
-	var mediaRec; // the object for recording and play sound
+	var audio; // the object for recording and play sound
 	var directory; // holds a reference for directory reading
 	
 	function recordAudio() {
 		$('#RecordOFF').attr('hidden','true');
 		$('#RecordON').removeAttr('hidden');
 		
-		mediaRec = new Media(src, onSuccess, onError);
-		
         // Record audio
-        mediaRec.startRecord();
+        audio.startRecord();
 
         // Stop recording after 10 sec
-        var recTime = 0;
+        var recTime = 5;
         var recInterval = setInterval(function() {
             recTime = recTime + 1;
             if (recTime >= 10) {
                 clearInterval(recInterval);
-                mediaRec.stopRecord();
+                audio.stopRecord();
             }
         }, 1000);
     }
 	
 	function onDeviceReady() {
         //recordAudio();
+		var audio = new Media(src, onSuccess, onError);
     }
 	function stopRecord (){
-		if(mediaRec)
-			mediaRec.stopRecord();
-		$('#RecordOFF').removeAttr("hidden");
+		if(audio)
+			audio.stopRecord();
+		$('#RecordOFF').removeAttr('hidden');
 		$('#RecordON').attr('hidden','true');
 	}
 	
 	function playRecord (){ 
-		if(mediaRec)
-			mediaRec.play();
+		if(audio)
+			audio.play();
 		$('#PlayOFF').attr('hidden','true');
 		$('#PlayON').removeAttr('hidden');
 	}
 	
 	function stopPlay (){
-		if(mediaRec)
-			mediaRec.stop();
+		if(audio)
+			audio.stop();
 		$('#PlayOFF').removeAttr('hidden');
 		$('#PlayON').attr('hidden','true');
 	}

@@ -1,5 +1,25 @@
 //Página de Connect
-
+	var AP;
+	function ghostHunter() {
+		//Funcion que quedara
+		//AP = Math.floor((Math.random()*10)+1);
+		AP=10;
+	}
+	
+	function APicon(){
+		var img = document.createElement("IMG");
+		var oldImg = document.getElementById('oldAP')
+		
+		if (AP=10){		
+			img.src = 'Imgs/ImgsMenu/ap1.png';
+			document.getElementById('APmeter').replaceChild(img, oldImg);
+		}		
+		else{
+			img.src = 'Imgs/ImgsMenu/ap2.png';
+			document.getElementById('APmeter').replaceChild(img, oldImg);
+		}
+	}
+			
 	function connect(){
 	    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
 		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
@@ -9,15 +29,14 @@
 	}
 	
 	function loading(){	
-		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!='')){
-window.location.replace('chat.html?'+$('#name').val()); 
+		if((AP>4) && ($('#name').val()!='')){
+			window.location.replace('chat.html?'+$('#name').val()); 
 		}
 		else {
 			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
 			$('#msg').text("Connection Failed. Try again later or seek for someone else");
 			$('#msg').attr('style','color:#FA5882');
 			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
-			ghostHunter();
 		}
 	
 	}
