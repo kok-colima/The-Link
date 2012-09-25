@@ -1,45 +1,21 @@
-<!-- Copyright (c) 2012 Mobile Developer Solutions -->
-<!DOCTYPE HTML>
-<html>
-  <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
     <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
     <title>Camera</title>
-
- 	<link href="jquery-mobile/the-link.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="index.css" /> 
-
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="jquery-mobile/the-link.min.css" />
+	<link rel="stylesheet" href="jquery-mobile/the-link.structure-1.0.min.css" />
     <script src="jquery-mobile/jquery-1.6.4.min.js"></script>
 	<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script>
+	
 	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+	<script type="text/javascript" charset="utf-8" src="camarita.js"></script>		
 	<script type="text/javascript" charset="utf-8" src="index.js"></script>
 	
-	
-	</head>
- <script type="text/javascript">
- function foto(){
-	
-var img = new Image();
-img.src = take_pic();
-
-	
-var ctx = document.getElementById('myCanvas').getContext('2d');
-
-var img2 = new Image();
-img2.src = 'miku.png';
-
-
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
-	ctx.drawImage(img2,0,0);
-  }
-  
-  }
-   function onFail(message) {
-                alert('Failed because: ' + message);
-            }
-</script>
             
-<style type="text/css">
+	<style type="text/css">
     body {
 		background-image: url(Imgs/ImgsMenu/fondo.png);
 		background-repeat: repeat;
@@ -50,109 +26,38 @@ img2.src = 'miku.png';
     body,td,th {
 		color: #FFF;
 	}
+	
 </style>
+</head>
 
-  <body onload="init();">
-	<div data-role="page" id="page-home">
-
-	<div data-role="header">
-    	<a href="index.html" data-icon="delete">Close</a>
-    	<h1 class="title"><em>Take a photo</em></h1>
-        <a href="index.html" data-icon="refresh">Refresh</a>
-    </div>
-
-		    <div id="api-camera">
-               
-				<h4 class="help"><b>Take a Picture</b></h4><br/>
-				<div class="ui-grid-a">
-					<div class="ui-block-a"><div data-role="button" onclick="take_pic();">Take a Picture</div></div>
-					<div class="ui-block-a"><div data-role="button" onclick="foto();">Aparecer fantasma buu</div></div>
-				</div>				
-      			<img id="cameraImage" src="" />
-				<canvas id="myCanvas"></canvas>
-			</div>
-
-		     <div class="api-div" id="api-device">
-			
-				</blockquote>
-				
-      			<table id="deviceinfo">
-  					<tr>
-   					 	<th>Device</th>
-   					 	<th class="alt">Value</th>
-  					</tr>
-  					<tr>
-    					<td>Name</td>
-    					<td class="alt"><strong id="name">&nbsp;</strong></td>
-  					</tr>
-  					<tr>
-    					<td>Platform</td>
-   					 	<td class="alt"><strong id="platform">&nbsp;</strong></td>
-  					</tr>
-  					<tr>
-    					<td>PhoneGap Version</td>
-   					 	<td class="alt"><strong id="pgversion">&nbsp;</strong></td>
-  					</tr>
-  					<tr>
-    					<td>UUID</td>
-   					 	<td class="alt"><strong id="uuid">&nbsp;</strong></td>
-  					</tr>
-  					<tr>
-    					<td>OS Version</td>
-   					 	<td class="alt"><strong id="version">&nbsp;</strong></td>
-  					</tr>
-  					<tr>
-   					 	<th>Screen</th>
-   					 	<th class="alt">Value</th>
-  					</tr>
-  					<tr>
-    					<td>Width</td>
-    					<td class="alt"><strong id="width">&nbsp;</strong></td>
-  					</tr>
-   					<tr>
-    					<td>Height</td>
-    					<td class="alt"><strong id="height">&nbsp;</strong></td>
-  					</tr>
-   					<tr>
-    					<td>Available Width</td>
-    					<td class="alt"><strong id="availwidth">&nbsp;</strong></td>
-  					</tr>
-   					<tr>
-    					<td>Available Height</td>
-    					<td class="alt"><strong id="availheight">&nbsp;</strong></td>
-  					</tr>
-   					<tr>
-    					<td>Color Depth</td>
-    					<td class="alt"><strong id="colorDepth">&nbsp;</strong></td>
-  					</tr> 					
-				</table>							
-			</div>
-
+  <body>
+	<div data-role="page" id="camera" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+	
+		<div data-role="header">
+			<a href="index.html" data-icon="delete">Close</a>
+			<h1 class="title"><em>Take a photo</em></h1>
+			<a href="index.html" data-icon="refresh">Refresh</a>
 		</div>
-	</div>
-    <div data-role="footer" data-id="navMenu" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="index.html" data-role="button" data-icon="info">More</a></li>
-				<li><a href="index.html" data-role="button" data-icon="home">Menu</a></li>
-            	<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
-			</ul>
-		</div>
-    </div> 
-</div>	
 
-	<script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/contacts.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/events.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/file.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/storage.js"></script> 			
+		<div data-role"content" align="center">
+			<a data-role="button" data-icon="check" data-iconpos="left" data-inline="true" onclick="capturePhoto();">Capture Photo</a> <br>
+			<a data-role="button" data-icon="check" data-iconpos="left" data-inline="true" onclick="capturePhotoEdit();">Capture Editable Photo</a> <br>
+			<a data-role="button" data-icon="check" data-iconpos="left" data-inline="true" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</a><br>
+			<a data-role="button" data-icon="check" data-iconpos="left" data-inline="true" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</a><br>
+			<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+			<img style="display:none;" id="largeImage" src="" />		
+		</div>
+	     
+		<div data-role="footer" data-id="navMenu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-role="button" data-icon="info">More</a></li>
+					<li><a href="index.html" data-role="button" data-icon="home">Menu</a></li>
+					<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
+				</ul>
+			</div>
+		</div> 
+	</div>	
+	
   </body>
 </html>

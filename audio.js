@@ -1,21 +1,4 @@
-	var AP;
-    function onstart() {
-		AP = Math.floor((Math.random()*10)+1);
-	}
-	   
-	function toConnect() {     
-		$.mobile.changePage('connect.html?'+AP);  
-    }
-		
-	function toCamera() {       
-		$.mobile.changePage('camera.html?'+AP); 
-	}
-		
-	function toAudio() {      
-		$.mobile.changePage('audio.html?'+AP); 
-	}
-	
-	document.addEventListener("deviceready", onDeviceReady, true);
+	document.addEventListener("deviceready", onDeviceReady, false);
 
     // Record audio
 	var state = 0; // 0 record, 1 stop, 2 playback   
@@ -72,7 +55,6 @@
     }
 
     // onError Callback 
-    //
     function onError(error) {
         alert('code: '    + error.code    + '\n' + 
               'message: ' + error.message + '\n');

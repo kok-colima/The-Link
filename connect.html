@@ -7,51 +7,28 @@
 	<link rel="stylesheet" href="/jquery-mobile/the-link.min.css" />
 	<link rel="stylesheet" href="/jquery-mobile/the-link.structure-1.0.min.css" />
 	<script src="/jquery-mobile/jquery-1.6.4.min.js"></script>
-	<script src="/jquery-mobile/jquery.mobile-1.0.min.js"></script> 
+	<script src="/jquery-mobile/jquery.mobile-1.0.min.js"></script>
+
+	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script> 
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="connect.js"></script>
+
+	<style type="text/css">
+		body {
+			background-image: url(Imgs/ImgsMenu/fondo.png);
+			background-repeat: repeat;
+		}
+		.title {
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		body,td,th {
+			color: #FFF;
+		}
+	</style>
 </head>
 
-<script type="text/javascript">  
-	function onback(){       
-		window.location.replace('menu.html'); 
-    }
-	
-	function connect(){
-	    $('#btcnt').attr('src','Imgs/ImgsConnect/connectON.png');
-		$('#load').attr('src','Imgs/ImgsConnect/load.gif');
-		$('#load').removeAttr('hidden');
-		$('#msg').removeAttr('hidden');
-		window.setTimeout('loading()',4000);
-	}
-	
-	function loading(){	
-		if((window.location.search.substr(1).split("?")>4) && ($('#name').val()!=''))
-			window.location.replace('chat.html?'+$('#name').val()); 
-			
-		else {
-			$('#load').attr('src','Imgs/ImgsConnect/cantconnect.png');
-			$('#msg').text("Connection Failed. Try again later or seek for someone else");
-			$('#msg').attr('style','color:#FA5882');
-			$('#btcnt').attr('src','Imgs/ImgsConnect/connectOFF.png');
-		}
-	
-	}
-</script>
-
-<style type="text/css">
-    body {
-		background-image: url(Imgs/ImgsMenu/fondo.png);
-		background-repeat: repeat;
-	}
-    .title {
-		font-family: Tahoma, Geneva, sans-serif;
-	}
-    body,td,th {
-		color: #FFF;
-	}
-</style>
-
 <body>
-<div data-role="page" id="conect" align="center" style="background-image: url(Imgs/ImgsMenu/fondo.png);">
+<div data-role="page" id="connect" align="center" style="background-image: url(Imgs/ImgsMenu/fondo.png);">
 	
     <div data-role="header">
     	<a href="index.html" data-icon="delete">Close</a>

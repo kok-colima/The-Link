@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <title>Audio recorder</title>
     <meta charset="utf-8" />
@@ -13,6 +12,7 @@
 	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
 	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
 	<script type="text/javascript" charset="utf-8" src="audio.js"></script>
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
 
 	<style type="text/css">
     	body {
@@ -29,7 +29,7 @@
 </head>
 
 <body> 
-<div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+<div data-role="page" id="audio" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 	
 	<div data-role="header">
     	<a href="index.html" data-icon="delete">Close</a>
@@ -41,14 +41,15 @@
 		<ul data-role="slider">Audio:</ul>
     	<table width="200" border="0" cellspacing="20">
 		  <tr>
-		    <td><img src="Imgs/ImgsGrabadora/btnrecOFF.png" id="RecordOFF" alt="Record audio" onclick="startRecord();" />
-				<img src="Imgs/ImgsGrabadora/btnrecON.png" 
-	            id="RecordON" hidden="true" alt="Stop recording" onclick="stopRecord();" />
+		    <td>
+				<img src="Imgs/ImgsGrabadora/btnrecOFF.png" id="RecordOFF" alt="Record audio" onclick="startRecord();" />
+				<img src="Imgs/ImgsGrabadora/btnrecON.png" id="RecordON" hidden="true" alt="Stop recording" onclick="stopRecord();" />
             </td>
                 
-		    <td><img src="Imgs/ImgsGrabadora/btnplayOFF.png" id="PlayOFF" alt="Play the audio" onclick="playRecord();" />
-            	<img src="Imgs/ImgsGrabadora/btnplayON.png" 
-            	id="PlayON" hidden="true" alt="Stop the audio" onclick="stopPlay();" /></td>
+		    <td>
+				<img src="Imgs/ImgsGrabadora/btnplayOFF.png" id="PlayOFF" alt="Play the audio" onclick="playRecord();" />
+            	<img src="Imgs/ImgsGrabadora/btnplayON.png" id="PlayON" hidden="true" alt="Stop the audio" onclick="stopPlay();" />
+			</td>
 		  </tr>
 		</table>
         <br /><br />

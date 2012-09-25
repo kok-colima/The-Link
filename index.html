@@ -12,23 +12,13 @@
 	
 	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script> 
 	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
-	<script type="text/javascript" charset="utf-8" src="audio.js"></script>
-	
-	<script type="text/javascript" charset="utf-8" src="index.js"></script>
-	<script type="text/javascript" charset="utf-8" src="camarita.js"></script>	
-	<script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
 	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/contacts.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/events.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/file.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
-	<script type="text/javascript" charset="utf-8" src="apis/storage.js"></script> 	
-
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jasonParser.js"></script>
+	<script type="text/javascript" charset="utf-8" src="connect.js"></script>	
+	<script type="text/javascript" charset="utf-8" src="audio.js"></script>
+	<script type="text/javascript" charset="utf-8" src="camarita.js"></script>
+	
 	<style type="text/css">
     	body {
 			background-image: url(Imgs/ImgsMenu/fondo.png);
@@ -43,31 +33,31 @@
 	</style>
 </head>
 
-<body onload="onstart()">
-<div data-role="page" id="page" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
+<body onload="ghostHunter();">
+	<div data-role="page" id="menu" style="background-image:url(Imgs/ImgsMenu/fondo.png); color:#FFF">
 
-	<div data-role="header">
-    	<a href="index.html" data-icon="delete">Close</a>
-    	<h1 class="title"><em>Menu</em></h1>
-        <a href="index.html" data-icon="refresh">Refresh</a>
-    </div>
-    
-	<div data-role="content" align="center">
-    	<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /> <br /><br />
-    	<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /> <br /><br />
-		<img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" onclick="toAudio();" /> <br /><br />
-	</div>
-    
-    <div data-role="footer" data-id="navMenu" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="" data-role="button" data-icon="info">More</a></li>
-				<li><a href="menu.html" data-role="button" data-icon="home">Menu</a></li>
-            	<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
-			</ul>
+		<div data-role="header">
+			<a href="index.html" data-icon="delete">Close</a>
+			<h1 class="title"><em>Menu</em></h1>
+			<a href="index.html" data-icon="refresh">Refresh</a>
 		</div>
-    </div>
     
-</div>
+		<div data-role="content" align="center">
+			<img src="Imgs/ImgsMenu/connect.png" alt="Connect with spirits" onclick="toConnect();" /> <br /><br />
+			<img src="Imgs/ImgsMenu/takephoto.png" alt="Take a photo" onclick="toCamera();" /> <br /><br />
+			<img src="Imgs/ImgsMenu/recordaudio.png" alt="Record audio" onclick="toAudio();" /> <br /><br />
+		</div>
+    
+		<div data-role="footer" data-id="navMenu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="" data-role="button" data-icon="info">More</a></li>
+					<li><a href="menu.html" data-role="button" data-icon="home">Menu</a></li>
+					<li><a href="intro.html" data-role="button" data-icon="grid">Instructions</a></li>
+				</ul>
+			</div>
+		</div>
+    
+	</div>
 </body>
 </html>
