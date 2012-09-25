@@ -4,7 +4,7 @@
 		}
 	   
 		function toConnect() {     
-		window.location.replace('connect.html?'+10);  
+			window.location.replace('connect.html?'+10);  
 		}
 		
 		function toCamera() {       
@@ -13,4 +13,8 @@
 		
 		function toAudio() {      
 			$.mobile.changePage('audio.html?'+AP); 
+		}
+		
+		function closeApp(){
+			navigator.app.exitApp();
 		}
