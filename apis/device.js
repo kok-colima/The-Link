@@ -83,6 +83,8 @@ var onDeviceReady = function() {
     }
 };
 
+var AP;
 function init() {
     document.addEventListener("deviceready", onDeviceReady, true);
+	AP = Math.floor((Math.random()*10)+1);
 }
