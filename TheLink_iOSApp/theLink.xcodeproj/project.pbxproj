@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F97A15D162209CD0030E379 /* TLSpiritChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97A15C162209CD0030E379 /* TLSpiritChatCell.m */; };
+		4F97A160162209D70030E379 /* TLPersonChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97A15F162209D70030E379 /* TLPersonChatCell.m */; };
+		4F97A162162209E50030E379 /* TLSpiritChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F97A161162209E50030E379 /* TLSpiritChatCell.xib */; };
+		4F97A164162209EF0030E379 /* TLPersonChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F97A163162209EF0030E379 /* TLPersonChatCell.xib */; };
+		4F9E97B2161D306000FB6FF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9E97B1161D306000FB6FF2 /* UIKit.framework */; };
+		4F9E97B4161D306000FB6FF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9E97B3161D306000FB6FF2 /* Foundation.framework */; };
+		4F9E97B6161D306000FB6FF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9E97B5161D306000FB6FF2 /* CoreGraphics.framework */; };
+		4F9E97BC161D306000FB6FF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E97BA161D306000FB6FF2 /* InfoPlist.strings */; };
+		4F9E97BE161D306000FB6FF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E97BD161D306000FB6FF2 /* main.m */; };
+		4F9E97C2161D306000FB6FF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E97C1161D306000FB6FF2 /* AppDelegate.m */; };
+		4F9E97CB161D306000FB6FF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E97CA161D306000FB6FF2 /* ViewController.m */; };
+		4F9E97CE161D306000FB6FF2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E97CC161D306000FB6FF2 /* ViewController.xib */; };
+		4F9E97D7161D397300FB6FF2 /* TLInformation1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E97D5161D397300FB6FF2 /* TLInformation1ViewController.m */; };
+		4F9E97D8161D397300FB6FF2 /* TLInformation1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E97D6161D397300FB6FF2 /* TLInformation1ViewController.xib */; };
+		4F9E97DC161D398000FB6FF2 /* TLInformation2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E97DA161D398000FB6FF2 /* TLInformation2ViewController.m */; };
+		4F9E97DD161D398000FB6FF2 /* TLInformation2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E97DB161D398000FB6FF2 /* TLInformation2ViewController.xib */; };
+		4F9E97DF161D3D6C00FB6FF2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9E97DE161D3D6C00FB6FF2 /* QuartzCore.framework */; };
+		4F9E97E3161D407F00FB6FF2 /* TLMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E97E1161D407F00FB6FF2 /* TLMenuViewController.m */; };
+		4F9E97E4161D407F00FB6FF2 /* TLMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E97E2161D407F00FB6FF2 /* TLMenuViewController.xib */; };
+		4F9E97E6161D42B800FB6FF2 /* navBarHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E97E5161D42B800FB6FF2 /* navBarHeader.png */; };
+		4F9E980E161D5FBE00FB6FF2 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E980D161D5FBE00FB6FF2 /* 1.png */; };
+		4FA324C8161DB969001BCC39 /* TLSpiritConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA324C6161DB969001BCC39 /* TLSpiritConnectViewController.m */; };
+		4FA324C9161DB969001BCC39 /* TLSpiritConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA324C7161DB969001BCC39 /* TLSpiritConnectViewController.xib */; };
+		4FA324CD161DC2DE001BCC39 /* TLSpiritChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA324CB161DC2DE001BCC39 /* TLSpiritChatViewController.m */; };
+		4FA324CE161DC2DE001BCC39 /* TLSpiritChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA324CC161DC2DE001BCC39 /* TLSpiritChatViewController.xib */; };
+		4FB048B3161F551200AB689B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048AF161F551200AB689B /* Default.png */; };
+		4FB048B4161F551200AB689B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048B0161F551200AB689B /* Default@2x.png */; };
+		4FB048B5161F551200AB689B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048B1161F551200AB689B /* icon.png */; };
+		4FB048B6161F551200AB689B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048B2161F551200AB689B /* icon@2x.png */; };
+		4FB048D8161F554A00AB689B /* connectSpirits.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048B8161F554A00AB689B /* connectSpirits.png */; };
+		4FB048D9161F554A00AB689B /* connectSpirits@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048B9161F554A00AB689B /* connectSpirits@2x.png */; };
+		4FB048DA161F554A00AB689B /* generalBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048BA161F554A00AB689B /* generalBackground.png */; };
+		4FB048DB161F554A00AB689B /* generalBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048BB161F554A00AB689B /* generalBackground@2x.png */; };
+		4FB048DC161F554A00AB689B /* takePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048BC161F554A00AB689B /* takePhoto.png */; };
+		4FB048DD161F554A00AB689B /* takePhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048BD161F554A00AB689B /* takePhoto@2x.png */; };
+		4FB048DE161F554A00AB689B /* activityImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048BF161F554A00AB689B /* activityImage.png */; };
+		4FB048DF161F554A00AB689B /* activityImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C0161F554A00AB689B /* activityImage@2x.png */; };
+		4FB048E0161F554A00AB689B /* cantConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C1161F554A00AB689B /* cantConnect.png */; };
+		4FB048E1161F554A00AB689B /* cantConnect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C2161F554A00AB689B /* cantConnect@2x.png */; };
+		4FB048E2161F554A00AB689B /* connectOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C3161F554A00AB689B /* connectOn.png */; };
+		4FB048E3161F554A00AB689B /* connectOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C4161F554A00AB689B /* connectOn@2x.png */; };
+		4FB048E4161F554A00AB689B /* connectOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C5161F554A00AB689B /* connectOff.png */; };
+		4FB048E5161F554A00AB689B /* connectOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C6161F554A00AB689B /* connectOff@2x.png */; };
+		4FB048E6161F554A00AB689B /* dialogSpirit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C7161F554A00AB689B /* dialogSpirit.png */; };
+		4FB048E7161F554A00AB689B /* dialogSpirit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C8161F554A00AB689B /* dialogSpirit@2x.png */; };
+		4FB048E8161F554A00AB689B /* dialogUser.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048C9161F554A00AB689B /* dialogUser.png */; };
+		4FB048E9161F554A00AB689B /* dialogUser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048CA161F554A00AB689B /* dialogUser@2x.png */; };
+		4FB048EC161F554A00AB689B /* cameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048CE161F554A00AB689B /* cameraButton.png */; };
+		4FB048ED161F554A00AB689B /* cameraButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048CF161F554A00AB689B /* cameraButton@2x.png */; };
+		4FB048EE161F554A00AB689B /* cameraOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D0161F554A00AB689B /* cameraOverlay.png */; };
+		4FB048EF161F554A00AB689B /* cameraOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D1161F554A00AB689B /* cameraOverlay@2x.png */; };
+		4FB048F0161F554A00AB689B /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D2161F554A00AB689B /* cancel.png */; };
+		4FB048F1161F554A00AB689B /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D3161F554A00AB689B /* cancel@2x.png */; };
+		4FB048F2161F554A00AB689B /* centerPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D4161F554A00AB689B /* centerPhoto.png */; };
+		4FB048F3161F554A00AB689B /* centerPhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D5161F554A00AB689B /* centerPhoto@2x.png */; };
+		4FB048F4161F554A00AB689B /* savePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D6161F554A00AB689B /* savePhoto.png */; };
+		4FB048F5161F554A00AB689B /* savePhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048D7161F554A00AB689B /* savePhoto@2x.png */; };
+		4FB048F8161F555A00AB689B /* TLGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB048F7161F555A00AB689B /* TLGeneralViewController.m */; };
+		4FB048FA161F576400AB689B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048F9161F576400AB689B /* Default-568h@2x.png */; };
+		4FB048FD161F5A4600AB689B /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048FB161F5A4600AB689B /* backButton@2x.png */; };
+		4FB048FE161F5A4600AB689B /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB048FC161F5A4600AB689B /* backButton.png */; };
+		4FB0490D16206A5B00AB689B /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0490C16206A5B00AB689B /* Appirater.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		4FB0491116206C7400AB689B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0491016206C7400AB689B /* CFNetwork.framework */; };
+		4FB0491316206C7900AB689B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0491216206C7900AB689B /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F97A15B162209CD0030E379 /* TLSpiritChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpiritChatCell.h; sourceTree = "<group>"; };
+		4F97A15C162209CD0030E379 /* TLSpiritChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpiritChatCell.m; sourceTree = "<group>"; };
+		4F97A15E162209D70030E379 /* TLPersonChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLPersonChatCell.h; sourceTree = "<group>"; };
+		4F97A15F162209D70030E379 /* TLPersonChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLPersonChatCell.m; sourceTree = "<group>"; };
+		4F97A161162209E50030E379 /* TLSpiritChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLSpiritChatCell.xib; sourceTree = "<group>"; };
+		4F97A163162209EF0030E379 /* TLPersonChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLPersonChatCell.xib; sourceTree = "<group>"; };
+		4F9E97AD161D306000FB6FF2 /* theLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9E97B1161D306000FB6FF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4F9E97B3161D306000FB6FF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4F9E97B5161D306000FB6FF2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4F9E97B9161D306000FB6FF2 /* theLink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "theLink-Info.plist"; sourceTree = "<group>"; };
+		4F9E97BB161D306000FB6FF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4F9E97BD161D306000FB6FF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F9E97BF161D306000FB6FF2 /* theLink-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "theLink-Prefix.pch"; sourceTree = "<group>"; };
+		4F9E97C0161D306000FB6FF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F9E97C1161D306000FB6FF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F9E97C9161D306000FB6FF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4F9E97CA161D306000FB6FF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4F9E97CD161D306000FB6FF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		4F9E97D4161D397300FB6FF2 /* TLInformation1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLInformation1ViewController.h; sourceTree = "<group>"; };
+		4F9E97D5161D397300FB6FF2 /* TLInformation1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLInformation1ViewController.m; sourceTree = "<group>"; };
+		4F9E97D6161D397300FB6FF2 /* TLInformation1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLInformation1ViewController.xib; sourceTree = "<group>"; };
+		4F9E97D9161D398000FB6FF2 /* TLInformation2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLInformation2ViewController.h; sourceTree = "<group>"; };
+		4F9E97DA161D398000FB6FF2 /* TLInformation2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLInformation2ViewController.m; sourceTree = "<group>"; };
+		4F9E97DB161D398000FB6FF2 /* TLInformation2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLInformation2ViewController.xib; sourceTree = "<group>"; };
+		4F9E97DE161D3D6C00FB6FF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4F9E97E0161D407F00FB6FF2 /* TLMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMenuViewController.h; sourceTree = "<group>"; };
+		4F9E97E1161D407F00FB6FF2 /* TLMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMenuViewController.m; sourceTree = "<group>"; };
+		4F9E97E2161D407F00FB6FF2 /* TLMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLMenuViewController.xib; sourceTree = "<group>"; };
+		4F9E97E5161D42B800FB6FF2 /* navBarHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarHeader.png; sourceTree = "<group>"; };
+		4F9E980D161D5FBE00FB6FF2 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		4FA324C5161DB969001BCC39 /* TLSpiritConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpiritConnectViewController.h; sourceTree = "<group>"; };
+		4FA324C6161DB969001BCC39 /* TLSpiritConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpiritConnectViewController.m; sourceTree = "<group>"; };
+		4FA324C7161DB969001BCC39 /* TLSpiritConnectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLSpiritConnectViewController.xib; sourceTree = "<group>"; };
+		4FA324CA161DC2DE001BCC39 /* TLSpiritChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpiritChatViewController.h; sourceTree = "<group>"; };
+		4FA324CB161DC2DE001BCC39 /* TLSpiritChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpiritChatViewController.m; sourceTree = "<group>"; };
+		4FA324CC161DC2DE001BCC39 /* TLSpiritChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLSpiritChatViewController.xib; sourceTree = "<group>"; };
+		4FB048AF161F551200AB689B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4FB048B0161F551200AB689B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4FB048B1161F551200AB689B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4FB048B2161F551200AB689B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		4FB048B8161F554A00AB689B /* connectSpirits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectSpirits.png; sourceTree = "<group>"; };
+		4FB048B9161F554A00AB689B /* connectSpirits@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectSpirits@2x.png"; sourceTree = "<group>"; };
+		4FB048BA161F554A00AB689B /* generalBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = generalBackground.png; sourceTree = "<group>"; };
+		4FB048BB161F554A00AB689B /* generalBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "generalBackground@2x.png"; sourceTree = "<group>"; };
+		4FB048BC161F554A00AB689B /* takePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takePhoto.png; sourceTree = "<group>"; };
+		4FB048BD161F554A00AB689B /* takePhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takePhoto@2x.png"; sourceTree = "<group>"; };
+		4FB048BF161F554A00AB689B /* activityImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activityImage.png; sourceTree = "<group>"; };
+		4FB048C0161F554A00AB689B /* activityImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activityImage@2x.png"; sourceTree = "<group>"; };
+		4FB048C1161F554A00AB689B /* cantConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cantConnect.png; sourceTree = "<group>"; };
+		4FB048C2161F554A00AB689B /* cantConnect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cantConnect@2x.png"; sourceTree = "<group>"; };
+		4FB048C3161F554A00AB689B /* connectOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectOn.png; sourceTree = "<group>"; };
+		4FB048C4161F554A00AB689B /* connectOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectOn@2x.png"; sourceTree = "<group>"; };
+		4FB048C5161F554A00AB689B /* connectOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectOff.png; sourceTree = "<group>"; };
+		4FB048C6161F554A00AB689B /* connectOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectOff@2x.png"; sourceTree = "<group>"; };
+		4FB048C7161F554A00AB689B /* dialogSpirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialogSpirit.png; sourceTree = "<group>"; };
+		4FB048C8161F554A00AB689B /* dialogSpirit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogSpirit@2x.png"; sourceTree = "<group>"; };
+		4FB048C9161F554A00AB689B /* dialogUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialogUser.png; sourceTree = "<group>"; };
+		4FB048CA161F554A00AB689B /* dialogUser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogUser@2x.png"; sourceTree = "<group>"; };
+		4FB048CE161F554A00AB689B /* cameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraButton.png; sourceTree = "<group>"; };
+		4FB048CF161F554A00AB689B /* cameraButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraButton@2x.png"; sourceTree = "<group>"; };
+		4FB048D0161F554A00AB689B /* cameraOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraOverlay.png; sourceTree = "<group>"; };
+		4FB048D1161F554A00AB689B /* cameraOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraOverlay@2x.png"; sourceTree = "<group>"; };
+		4FB048D2161F554A00AB689B /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		4FB048D3161F554A00AB689B /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		4FB048D4161F554A00AB689B /* centerPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centerPhoto.png; sourceTree = "<group>"; };
+		4FB048D5161F554A00AB689B /* centerPhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "centerPhoto@2x.png"; sourceTree = "<group>"; };
+		4FB048D6161F554A00AB689B /* savePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savePhoto.png; sourceTree = "<group>"; };
+		4FB048D7161F554A00AB689B /* savePhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savePhoto@2x.png"; sourceTree = "<group>"; };
+		4FB048F6161F555A00AB689B /* TLGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLGeneralViewController.h; sourceTree = "<group>"; };
+		4FB048F7161F555A00AB689B /* TLGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLGeneralViewController.m; sourceTree = "<group>"; };
+		4FB048F9161F576400AB689B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4FB048FB161F5A4600AB689B /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
+		4FB048FC161F5A4600AB689B /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		4FB0490B16206A5B00AB689B /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		4FB0490C16206A5B00AB689B /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
+		4FB0490E16206B6A00AB689B /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
+		4FB0491016206C7400AB689B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4FB0491216206C7900AB689B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F9E97AA161D306000FB6FF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB0491316206C7900AB689B /* SystemConfiguration.framework in Frameworks */,
+				4FB0491116206C7400AB689B /* CFNetwork.framework in Frameworks */,
+				4F9E97DF161D3D6C00FB6FF2 /* QuartzCore.framework in Frameworks */,
+				4F9E97B2161D306000FB6FF2 /* UIKit.framework in Frameworks */,
+				4F9E97B4161D306000FB6FF2 /* Foundation.framework in Frameworks */,
+				4F9E97B6161D306000FB6FF2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F97A159162209B30030E379 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4F97A15B162209CD0030E379 /* TLSpiritChatCell.h */,
+				4F97A15C162209CD0030E379 /* TLSpiritChatCell.m */,
+				4F97A161162209E50030E379 /* TLSpiritChatCell.xib */,
+				4F97A15E162209D70030E379 /* TLPersonChatCell.h */,
+				4F97A15F162209D70030E379 /* TLPersonChatCell.m */,
+				4F97A163162209EF0030E379 /* TLPersonChatCell.xib */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		4F97A183162246C30030E379 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4F9E97C0161D306000FB6FF2 /* AppDelegate.h */,
+				4F9E97C1161D306000FB6FF2 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4F97A184162246CB0030E379 /* General Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FB048F6161F555A00AB689B /* TLGeneralViewController.h */,
+				4FB048F7161F555A00AB689B /* TLGeneralViewController.m */,
+			);
+			name = "General Controller";
+			sourceTree = "<group>";
+		};
+		4F97A185162246D70030E379 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F9E97C9161D306000FB6FF2 /* ViewController.h */,
+				4F9E97CA161D306000FB6FF2 /* ViewController.m */,
+				4F9E97CC161D306000FB6FF2 /* ViewController.xib */,
+				4F9E97D4161D397300FB6FF2 /* TLInformation1ViewController.h */,
+				4F9E97D5161D397300FB6FF2 /* TLInformation1ViewController.m */,
+				4F9E97D6161D397300FB6FF2 /* TLInformation1ViewController.xib */,
+				4F9E97D9161D398000FB6FF2 /* TLInformation2ViewController.h */,
+				4F9E97DA161D398000FB6FF2 /* TLInformation2ViewController.m */,
+				4F9E97DB161D398000FB6FF2 /* TLInformation2ViewController.xib */,
+				4F9E97E0161D407F00FB6FF2 /* TLMenuViewController.h */,
+				4F9E97E1161D407F00FB6FF2 /* TLMenuViewController.m */,
+				4F9E97E2161D407F00FB6FF2 /* TLMenuViewController.xib */,
+				4FA324C5161DB969001BCC39 /* TLSpiritConnectViewController.h */,
+				4FA324C6161DB969001BCC39 /* TLSpiritConnectViewController.m */,
+				4FA324C7161DB969001BCC39 /* TLSpiritConnectViewController.xib */,
+				4FA324CA161DC2DE001BCC39 /* TLSpiritChatViewController.h */,
+				4FA324CB161DC2DE001BCC39 /* TLSpiritChatViewController.m */,
+				4FA324CC161DC2DE001BCC39 /* TLSpiritChatViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4F9E97A2161D306000FB6FF2 = {
+			isa = PBXGroup;
+			children = (
+				4FB048F9161F576400AB689B /* Default-568h@2x.png */,
+				4FB048AF161F551200AB689B /* Default.png */,
+				4FB048B0161F551200AB689B /* Default@2x.png */,
+				4FB048B1161F551200AB689B /* icon.png */,
+				4FB048B2161F551200AB689B /* icon@2x.png */,
+				4F9E97B7161D306000FB6FF2 /* theLink */,
+				4F9E97B0161D306000FB6FF2 /* Frameworks */,
+				4F9E97AE161D306000FB6FF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F9E97AE161D306000FB6FF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F9E97AD161D306000FB6FF2 /* theLink.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F9E97B0161D306000FB6FF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0491216206C7900AB689B /* SystemConfiguration.framework */,
+				4FB0491016206C7400AB689B /* CFNetwork.framework */,
+				4F9E97DE161D3D6C00FB6FF2 /* QuartzCore.framework */,
+				4F9E97B1161D306000FB6FF2 /* UIKit.framework */,
+				4F9E97B3161D306000FB6FF2 /* Foundation.framework */,
+				4F9E97B5161D306000FB6FF2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F9E97B7161D306000FB6FF2 /* theLink */ = {
+			isa = PBXGroup;
+			children = (
+				4F97A185162246D70030E379 /* Controllers */,
+				4F97A184162246CB0030E379 /* General Controller */,
+				4F97A183162246C30030E379 /* AppDelegate */,
+				4F97A159162209B30030E379 /* Custom Cells */,
+				4FB0490A16206A5000AB689B /* Appirater */,
+				4F9E97B8161D306000FB6FF2 /* Supporting Files */,
+			);
+			path = theLink;
+			sourceTree = "<group>";
+		};
+		4F9E97B8161D306000FB6FF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FB048AD161F54FC00AB689B /* Image Resources */,
+				4F9E980D161D5FBE00FB6FF2 /* 1.png */,
+				4F9E97E5161D42B800FB6FF2 /* navBarHeader.png */,
+				4F9E97B9161D306000FB6FF2 /* theLink-Info.plist */,
+				4F9E97BA161D306000FB6FF2 /* InfoPlist.strings */,
+				4F9E97BD161D306000FB6FF2 /* main.m */,
+				4F9E97BF161D306000FB6FF2 /* theLink-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FB048AD161F54FC00AB689B /* Image Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FB048B7161F554A00AB689B /* Menu */,
+				4FB048BE161F554A00AB689B /* SpiritChat */,
+				4FB048CB161F554A00AB689B /* Photo */,
+			);
+			name = "Image Resources";
+			sourceTree = "<group>";
+		};
+		4FB048B7161F554A00AB689B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4FB048B8161F554A00AB689B /* connectSpirits.png */,
+				4FB048B9161F554A00AB689B /* connectSpirits@2x.png */,
+				4FB048BA161F554A00AB689B /* generalBackground.png */,
+				4FB048BB161F554A00AB689B /* generalBackground@2x.png */,
+				4FB048BC161F554A00AB689B /* takePhoto.png */,
+				4FB048BD161F554A00AB689B /* takePhoto@2x.png */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		4FB048BE161F554A00AB689B /* SpiritChat */ = {
+			isa = PBXGroup;
+			children = (
+				4FB048BF161F554A00AB689B /* activityImage.png */,
+				4FB048C0161F554A00AB689B /* activityImage@2x.png */,
+				4FB048C1161F554A00AB689B /* cantConnect.png */,
+				4FB048C2161F554A00AB689B /* cantConnect@2x.png */,
+				4FB048C3161F554A00AB689B /* connectOn.png */,
+				4FB048C4161F554A00AB689B /* connectOn@2x.png */,
+				4FB048C5161F554A00AB689B /* connectOff.png */,
+				4FB048C6161F554A00AB689B /* connectOff@2x.png */,
+				4FB048C7161F554A00AB689B /* dialogSpirit.png */,
+				4FB048C8161F554A00AB689B /* dialogSpirit@2x.png */,
+				4FB048C9161F554A00AB689B /* dialogUser.png */,
+				4FB048CA161F554A00AB689B /* dialogUser@2x.png */,
+			);
+			path = SpiritChat;
+			sourceTree = "<group>";
+		};
+		4FB048CB161F554A00AB689B /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				4FB048FB161F5A4600AB689B /* backButton@2x.png */,
+				4FB048FC161F5A4600AB689B /* backButton.png */,
+				4FB048CE161F554A00AB689B /* cameraButton.png */,
+				4FB048CF161F554A00AB689B /* cameraButton@2x.png */,
+				4FB048D0161F554A00AB689B /* cameraOverlay.png */,
+				4FB048D1161F554A00AB689B /* cameraOverlay@2x.png */,
+				4FB048D2161F554A00AB689B /* cancel.png */,
+				4FB048D3161F554A00AB689B /* cancel@2x.png */,
+				4FB048D4161F554A00AB689B /* centerPhoto.png */,
+				4FB048D5161F554A00AB689B /* centerPhoto@2x.png */,
+				4FB048D6161F554A00AB689B /* savePhoto.png */,
+				4FB048D7161F554A00AB689B /* savePhoto@2x.png */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		4FB0490A16206A5000AB689B /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0490B16206A5B00AB689B /* Appirater.h */,
+				4FB0490C16206A5B00AB689B /* Appirater.m */,
+				4FB0490E16206B6A00AB689B /* AppiraterDelegate.h */,
+			);
+			name = Appirater;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F9E97AC161D306000FB6FF2 /* theLink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F9E97D1161D306000FB6FF2 /* Build configuration list for PBXNativeTarget "theLink" */;
+			buildPhases = (
+				4F9E97A9161D306000FB6FF2 /* Sources */,
+				4F9E97AA161D306000FB6FF2 /* Frameworks */,
+				4F9E97AB161D306000FB6FF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = theLink;
+			productName = theLink;
+			productReference = 4F9E97AD161D306000FB6FF2 /* theLink.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F9E97A4161D306000FB6FF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = VanillaSys;
+			};
+			buildConfigurationList = 4F9E97A7161D306000FB6FF2 /* Build configuration list for PBXProject "theLink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4F9E97A2161D306000FB6FF2;
+			productRefGroup = 4F9E97AE161D306000FB6FF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F9E97AC161D306000FB6FF2 /* theLink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F9E97AB161D306000FB6FF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9E97BC161D306000FB6FF2 /* InfoPlist.strings in Resources */,
+				4F9E97CE161D306000FB6FF2 /* ViewController.xib in Resources */,
+				4F9E97D8161D397300FB6FF2 /* TLInformation1ViewController.xib in Resources */,
+				4F9E97DD161D398000FB6FF2 /* TLInformation2ViewController.xib in Resources */,
+				4F9E97E4161D407F00FB6FF2 /* TLMenuViewController.xib in Resources */,
+				4F9E97E6161D42B800FB6FF2 /* navBarHeader.png in Resources */,
+				4F9E980E161D5FBE00FB6FF2 /* 1.png in Resources */,
+				4FA324C9161DB969001BCC39 /* TLSpiritConnectViewController.xib in Resources */,
+				4FA324CE161DC2DE001BCC39 /* TLSpiritChatViewController.xib in Resources */,
+				4FB048B3161F551200AB689B /* Default.png in Resources */,
+				4FB048B4161F551200AB689B /* Default@2x.png in Resources */,
+				4FB048B5161F551200AB689B /* icon.png in Resources */,
+				4FB048B6161F551200AB689B /* icon@2x.png in Resources */,
+				4FB048D8161F554A00AB689B /* connectSpirits.png in Resources */,
+				4FB048D9161F554A00AB689B /* connectSpirits@2x.png in Resources */,
+				4FB048DA161F554A00AB689B /* generalBackground.png in Resources */,
+				4FB048DB161F554A00AB689B /* generalBackground@2x.png in Resources */,
+				4FB048DC161F554A00AB689B /* takePhoto.png in Resources */,
+				4FB048DD161F554A00AB689B /* takePhoto@2x.png in Resources */,
+				4FB048DE161F554A00AB689B /* activityImage.png in Resources */,
+				4FB048DF161F554A00AB689B /* activityImage@2x.png in Resources */,
+				4FB048E0161F554A00AB689B /* cantConnect.png in Resources */,
+				4FB048E1161F554A00AB689B /* cantConnect@2x.png in Resources */,
+				4FB048E2161F554A00AB689B /* connectOn.png in Resources */,
+				4FB048E3161F554A00AB689B /* connectOn@2x.png in Resources */,
+				4FB048E4161F554A00AB689B /* connectOff.png in Resources */,
+				4FB048E5161F554A00AB689B /* connectOff@2x.png in Resources */,
+				4FB048E6161F554A00AB689B /* dialogSpirit.png in Resources */,
+				4FB048E7161F554A00AB689B /* dialogSpirit@2x.png in Resources */,
+				4FB048E8161F554A00AB689B /* dialogUser.png in Resources */,
+				4FB048E9161F554A00AB689B /* dialogUser@2x.png in Resources */,
+				4FB048EC161F554A00AB689B /* cameraButton.png in Resources */,
+				4FB048ED161F554A00AB689B /* cameraButton@2x.png in Resources */,
+				4FB048EE161F554A00AB689B /* cameraOverlay.png in Resources */,
+				4FB048EF161F554A00AB689B /* cameraOverlay@2x.png in Resources */,
+				4FB048F0161F554A00AB689B /* cancel.png in Resources */,
+				4FB048F1161F554A00AB689B /* cancel@2x.png in Resources */,
+				4FB048F2161F554A00AB689B /* centerPhoto.png in Resources */,
+				4FB048F3161F554A00AB689B /* centerPhoto@2x.png in Resources */,
+				4FB048F4161F554A00AB689B /* savePhoto.png in Resources */,
+				4FB048F5161F554A00AB689B /* savePhoto@2x.png in Resources */,
+				4FB048FA161F576400AB689B /* Default-568h@2x.png in Resources */,
+				4FB048FD161F5A4600AB689B /* backButton@2x.png in Resources */,
+				4FB048FE161F5A4600AB689B /* backButton.png in Resources */,
+				4F97A162162209E50030E379 /* TLSpiritChatCell.xib in Resources */,
+				4F97A164162209EF0030E379 /* TLPersonChatCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F9E97A9161D306000FB6FF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9E97BE161D306000FB6FF2 /* main.m in Sources */,
+				4F9E97C2161D306000FB6FF2 /* AppDelegate.m in Sources */,
+				4F9E97CB161D306000FB6FF2 /* ViewController.m in Sources */,
+				4F9E97D7161D397300FB6FF2 /* TLInformation1ViewController.m in Sources */,
+				4F9E97DC161D398000FB6FF2 /* TLInformation2ViewController.m in Sources */,
+				4F9E97E3161D407F00FB6FF2 /* TLMenuViewController.m in Sources */,
+				4FA324C8161DB969001BCC39 /* TLSpiritConnectViewController.m in Sources */,
+				4FA324CD161DC2DE001BCC39 /* TLSpiritChatViewController.m in Sources */,
+				4FB048F8161F555A00AB689B /* TLGeneralViewController.m in Sources */,
+				4FB0490D16206A5B00AB689B /* Appirater.m in Sources */,
+				4F97A15D162209CD0030E379 /* TLSpiritChatCell.m in Sources */,
+				4F97A160162209D70030E379 /* TLPersonChatCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4F9E97BA161D306000FB6FF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F9E97BB161D306000FB6FF2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4F9E97CC161D306000FB6FF2 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F9E97CD161D306000FB6FF2 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F9E97CF161D306000FB6FF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4F9E97D0161D306000FB6FF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F9E97D2161D306000FB6FF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "theLink/theLink-Prefix.pch";
+				INFOPLIST_FILE = "theLink/theLink-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4F9E97D3161D306000FB6FF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "theLink/theLink-Prefix.pch";
+				INFOPLIST_FILE = "theLink/theLink-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F9E97A7161D306000FB6FF2 /* Build configuration list for PBXProject "theLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9E97CF161D306000FB6FF2 /* Debug */,
+				4F9E97D0161D306000FB6FF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F9E97D1161D306000FB6FF2 /* Build configuration list for PBXNativeTarget "theLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9E97D2161D306000FB6FF2 /* Debug */,
+				4F9E97D3161D306000FB6FF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F9E97A4161D306000FB6FF2 /* Project object */;
+}
